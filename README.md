@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document covers only RCI Interpreter. For general understanding of architecture and capabilities of Renyxa Cognitive Inventory please read the [Whitepaper document](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/docs/RCI-whitepaper.pdf)
+This document covers only RCI Interpreter. For general understanding of architecture and capabilities of Renyxa Cognitive Inventory please read the [RCI Whitepaper](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/docs/RCI-whitepaper.pdf)
 
 --------------------------------------------------------------------------------------------------------------------------
 
