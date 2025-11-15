@@ -1,6 +1,6 @@
 # **RCI Interpreter — README**
 
-## Overview**
+## Overview
 
 This document covers only RCI Interpreter. For general understanding of architecture and capabilities of Renyxa Cognitive Inventory please read the Whitepeper document at docs/RCI-whitepaper.pdf.
 
