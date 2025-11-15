@@ -1,0 +1,1643 @@
+[
+  {
+    "global_deixis": {
+      "narrator": "Bellingcat and Daily Nation",
+      "timeframe": "2025-06-15",
+      "location": "Sudan (Khartoum–Omdurman area)",
+      "environment": "Armed Conflict",
+      "audience": "general public",
+      "language": "English"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Bellingcat",
+      "description": "an investigative journalism organization",
+      "full_classification": "Entity > Organization > MediaOrganization",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0004-0004]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Daily Nation",
+      "description": "a Kenyan newspaper",
+      "full_classification": "Entity > Organization > MediaOrganization",
+      "alias_list": [
+        "Kenya’s Daily Nation"
+      ],
+      "xref": "[KENIA|0005-0005]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Rapid Support Forces",
+      "description": "a Sudanese paramilitary group",
+      "full_classification": "Entity > Organization > ArmedNonStateActor",
+      "alias_list": [
+        "RSF"
+      ],
+      "xref": "[KENIA|0008-0008]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Khartoum",
+      "description": "the capital city of Sudan",
+      "full_classification": "Entity > Site > GeoSite > City",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|000A-000A]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Kenyan MOD–labelled ammunition crates",
+      "description": "wooden logistics crates labeled with Kenya MOD markings, allegedly containing ammunition",
+      "full_classification": "Entity > MaterialEntity > PhysicalAsset > LogisticsUnit > Crate",
+      "alias_list": [
+        "Kenyan MOD-labelled crates"
+      ],
+      "xref": "[KENIA|0006-0007]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Alleged RSF depot near Khartoum",
+      "description": "an ammunition/arms depot reportedly used by the RSF in the Khartoum area",
+      "full_classification": "Entity > Site > GeoSite > Facility > Depot",
+      "alias_list": [
+        "Unknown depot (Khartoum vicinity)"
+      ],
+      "xref": "[KENIA|0008-000A]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Bellingcat and Daily Nation identified Kenyan MOD–labelled ammunition crates inside an alleged RSF depot close to Khartoum.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Daily Nation",
+          "role": "Facilitator"
+        },
+        {
+          "subject_reference": "Kenyan MOD–labelled ammunition crates",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "Alleged RSF depot near Khartoum",
+          "role": "Destination"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|0004-000A]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Sudanese Armed Forces",
+      "description": "the national military forces of Sudan",
+      "full_classification": "Entity > Organization > Military",
+      "alias_list": [
+        "SAF"
+      ],
+      "xref": "[KENIA|0011-0011]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Ammunition tins (matching labels)",
+      "description": "metal tins containing ammunition with markings matching labels on nearby crates",
+      "full_classification": "Entity > MaterialEntity > PhysicalAsset > Ammunition > SmallArmsAmmo",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|000D-0010]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Investigators found ammunition tins matching the labels on the crates among weapons displayed by the Sudanese Armed Forces.",
+      "operative_verb": [
+        "Act.Generic.find",
+        "Act.Generic.display"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Daily Nation",
+          "role": "Facilitator"
+        },
+        {
+          "subject_reference": "Ammunition tins (matching labels)",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Source"
+        }
+      ],
+      "xref": "[KENIA|000B-0012]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Mohamed Hamdan Dagalo",
+      "description": "Sudanese RSF leader and political figure",
+      "full_classification": "Entity > MaterialEntity > Person > MilitaryOfficer",
+      "alias_list": [
+        "Hemedti",
+        "General Mohamed Hamdan Dagalo"
+      ],
+      "xref": "[KENIA|0018-0022]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Nairobi",
+      "description": "the capital city of Kenya",
+      "full_classification": "Entity > Site > GeoSite > City",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|001A-001A]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Government of Kenya",
+      "description": "the national government of the Republic of Kenya",
+      "full_classification": "Entity > Organization > GovernmentStructure > NationalGovernment",
+      "alias_list": [
+        "Ruto government"
+      ],
+      "xref": "[KENIA|0020-0020]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Mohamed Hamdan Dagalo visited Nairobi.",
+      "operative_verb": [
+        "Act.Generic.visit"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Mohamed Hamdan Dagalo",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Nairobi",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|0017-001A]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Government of Sudan",
+      "description": "the national government of Sudan",
+      "full_classification": "Entity > Organization > GovernmentStructure > NationalGovernment",
+      "alias_list": [
+        "Sudanese government"
+      ],
+      "xref": "[KENIA|001C-001C]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Kenya",
+      "description": "a country in East Africa",
+      "full_classification": "Entity > Site > GeoSite > Country",
+      "alias_list": [
+        "Republic of Kenya"
+      ],
+      "xref": "[KENIA|001D-001D]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Sudanese government banned all imports from Kenya.",
+      "operative_verb": [
+        "Diplomacy.Coercion.embargo"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Government of Sudan",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Kenya",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|001B-001D]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Government of Kenya hosted Hemedti and stated that its aim was to promote dialogue and peace and to engage all parties in the conflict.",
+      "operative_verb": [
+        "Act.Generic.host",
+        "Act.Generic.state",
+        "Negotiation.mediate",
+        "Negotiation.agree"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Government of Kenya",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Mohamed Hamdan Dagalo",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|0023-002A]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Images of Kenyan MOD–labelled crates (social media)",
+      "description": "images circulating on social media purportedly showing ammunition left by the RSF",
+      "full_classification": "Entity > InformationCarrier > DigitalCarrier > SocialMediaPost > Image",
+      "alias_list": [
+        "X posts about Kenyan crates"
+      ],
+      "xref": "[KENIA|002B-0031]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Kenya Ordnance Factories Corporation",
+      "description": "a Kenyan state-owned defense manufacturer",
+      "full_classification": "Entity > Organization > StateOwnedEnterprise",
+      "alias_list": [
+        "KOFC"
+      ],
+      "xref": "[KENIA|0032-0035]"
+    }
+  },
+  {
+    "aspect": {
+      "subject_ref_list": [
+        {
+          "subject_type": "entity",
+          "subject_reference": "Kenya Ordnance Factories Corporation",
+          "subject_xref": "[KENIA|0032-0035]"
+        }
+      ],
+      "normalized": "KOFC states on its website that it produces small arms ammunition.",
+      "history": "Initial",
+      "xref": "[KENIA|0032-0035]",
+      "type": "function_profile",
+      "subtype": "production",
+      "attribute": [
+        {
+          "taxonomy": "FunctionProfile.Production",
+          "value": "SmallArmsAmmunition"
+        }
+      ]
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Ministry of Defence (Kenya)",
+      "description": "Kenya’s Ministry of Defence",
+      "full_classification": "Entity > Organization > GovernmentAgency",
+      "alias_list": [
+        "Kenyan MoD",
+        "Ministry of Defence of Kenya"
+      ],
+      "xref": "[KENIA|003C-003D]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Daily Nation asked the Ministry of Defence of Kenya about the crates and how they ended up in Sudan, and whether it is Kenyan government policy to supply ammunition or weapons to the RSF.",
+      "operative_verb": [
+        "Act.Generic.ask",
+        "IntelligenceOps.Collection.elicit"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Daily Nation",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Ministry of Defence (Kenya)",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|003A-0046]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Claimset: Kenyan-labelled crates in Sudan",
+      "description": "a set of claims asserting Kenyan MOD–labelled crates were present in an RSF depot near Khartoum",
+      "full_classification": "Entity > ConventionalEntity > Intelligence > Claimset",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0004-0012]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "“we do not recognize the crates nor the inscriptions on them.”",
+      "operative_verb": [
+        "Stance.deny"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Ministry of Defence (Kenya)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Claimset: Kenyan-labelled crates in Sudan",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|0063-0068]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Ministry of Defence stated that the Kenya Ordnance Factory Corporation has clear records of its supplies within and beyond Kenya and that audits of the factory’s operations are frequently conducted.",
+      "operative_verb": [
+        "Act.Generic.state",
+        "Act.Generic.audit",
+        "Act.Generic.record"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Ministry of Defence (Kenya)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Kenya Ordnance Factories Corporation",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|0069-0077]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Ministry of Defence distanced itself from the allegations and stated it operates within constitutional authorizations.",
+      "operative_verb": [
+        "Stance.deny",
+        "Act.Generic.operate"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Ministry of Defence (Kenya)",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|0078-0081]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Justin Lynch",
+      "description": "Managing Director of the Conflict Insights Group and Sudan researcher",
+      "full_classification": "Entity > MaterialEntity > Person > Researcher",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0082-0084]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Conflict Insights Group",
+      "description": "an organization focused on conflict research and analysis",
+      "full_classification": "Entity > Organization > ResearchOrganization",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0083-0083]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Justin Lynch told Bellingcat that the discovery of the crates is further evidence of Kenya’s political and logistical support for the RSF.",
+      "operative_verb": [
+        "Act.Generic.tell",
+        "Act.Generic.assess"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Justin Lynch",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|0082-0089]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Sudanese Armed Forces declared that they had retaken the final areas of resistance in Khartoum, Omdurman, and Bahri and that these areas were completely free of RSF forces by May 20.",
+      "operative_verb": [
+        "Act.Generic.retake",
+        "Act.Generic.declare"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|009E-00A6]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "UN Arms Embargo on Darfur (2005)",
+      "description": "a United Nations sanctions regime prohibiting supply of weapons to Darfur, Sudan",
+      "full_classification": "Entity > ConventionalEntity > Economy > SanctionsList > EmbargoNotice",
+      "alias_list": [
+        "2005 UN arms embargo (Darfur)"
+      ],
+      "xref": "[KENIA|00AE-00B2]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "A 2005 UN arms embargo remains in place prohibiting any country from supplying weapons to Darfur, Sudan.",
+      "operative_verb": [
+        "LifecycleAndStatus.EventStatus.remain",
+        "Diplomacy.Coercion.embargo"
+      ],
+      "participants": [
+        {
+          "subject_reference": "UN Arms Embargo on Darfur (2005)",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|00AE-00B2]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Amnesty International",
+      "description": "a human rights organization",
+      "full_classification": "Entity > Organization > NonGovernmentalOrganization",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|00B6-00B7]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Human Rights Watch",
+      "description": "a human rights organization",
+      "full_classification": "Entity > Organization > NonGovernmentalOrganization",
+      "alias_list": [
+        "HRW"
+      ],
+      "xref": "[KENIA|00B6-00B7]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Amnesty International and Human Rights Watch identified weapons produced in China, Iran, Russia, Serbia and the UAE being used in the conflict.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Amnesty International",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Human Rights Watch",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|00B6-00BC]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "International Court of Justice",
+      "description": "principal judicial organ of the United Nations seated in The Hague",
+      "full_classification": "Entity > Organization > InternationalCourt",
+      "alias_list": [
+        "ICJ"
+      ],
+      "xref": "[KENIA|00BF-00C1]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "United Arab Emirates",
+      "description": "a country in the Middle East",
+      "full_classification": "Entity > Site > GeoSite > Country",
+      "alias_list": [
+        "UAE"
+      ],
+      "xref": "[KENIA|00C2-00C7]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The Sudanese government brought a case before the International Court of Justice accusing the United Arab Emirates of complicity in genocide for supporting the RSF.",
+      "operative_verb": [
+        "Act.Generic.file",
+        "Act.Generic.accuse"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Government of Sudan",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "International Court of Justice",
+          "role": "Destination"
+        },
+        {
+          "subject_reference": "United Arab Emirates",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|00BD-00C5]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The United Arab Emirates categorically denied supporting the RSF and the case was dismissed because the UAE had not signed Article 9 of the Genocide Convention.",
+      "operative_verb": [
+        "Stance.deny",
+        "Act.Generic.dismiss"
+      ],
+      "participants": [
+        {
+          "subject_reference": "United Arab Emirates",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "International Court of Justice",
+          "role": "Arbitrator"
+        }
+      ],
+      "xref": "[KENIA|00C6-00CB]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "United Nations",
+      "description": "an intergovernmental organization",
+      "full_classification": "Entity > Organization > InternationalOrganization",
+      "alias_list": [
+        "UN"
+      ],
+      "xref": "[KENIA|00D3-00D4]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The United Nations said more than 24,000 people have been killed since fighting began in 2023, and more than 11 million people have been displaced.",
+      "operative_verb": [
+        "Act.Generic.report",
+        "LifecycleAndStatus.EventStatus.estimate"
+      ],
+      "participants": [
+        {
+          "subject_reference": "United Nations",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|00D3-00DB]"
+    }
+  },
+  {
+    "gap": {
+      "from_xref": "[KENIA|004A]",
+      "to_xref": "[KENIA|004E]",
+      "reason": "Fundraising/boilerplate content"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Sudanese Armed Forces soldiers and allied forces posted video clips claiming they were inside the Salha area in southern Omdurman.",
+      "operative_verb": [
+        "Act.Generic.post",
+        "Act.Generic.claim"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|00E8-00F1]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Omdurman",
+      "description": "a city adjacent to Khartoum in Sudan",
+      "full_classification": "Entity > Site > GeoSite > City",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|00F0-00F1]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Salha (Omdurman)",
+      "description": "a district in southern Omdurman, Sudan",
+      "full_classification": "Entity > Site > GeoSite > District",
+      "alias_list": [
+        "Salha"
+      ],
+      "xref": "[KENIA|00EF-00F1]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Bellingcat and Daily Nation identified three videos containing Kenyan MOD–labelled ammunition crates allegedly left by the RSF inside a depot most likely in Salha.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify",
+        "IntelligenceOps.Collection.geolocate"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Daily Nation",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "Salha (Omdurman)",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|00F2-00F8]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Investigators identified a Sudanese Armed Forces Major from the General Intelligence Service and at least one other young Sudanese soldier in the depot at the time of the Salha operation.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|00F9-0105]"
+    }
+  },
+  {
+    "gap": {
+      "from_xref": "[KENIA|0106]",
+      "to_xref": "[KENIA|0117]",
+      "reason": "Descriptive video narration and context without new atomic facts"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The videos and additional footage were geolocated to Salha, Omdurman, along the main road at coordinates 15.5479, 32.4273.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.geolocate"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Salha (Omdurman)",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|0138-0149]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Al-Makki Abdul Quddus Ahmed",
+      "description": "a Sudanese Armed Forces officer (Major) associated with the General Intelligence Service",
+      "full_classification": "Entity > MaterialEntity > Person > MilitaryOfficer",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0151-0162]"
+    }
+  },
+  {
+    "aspect": {
+      "subject_ref_list": [
+        {
+          "subject_type": "entity",
+          "subject_reference": "Al-Makki Abdul Quddus Ahmed",
+          "subject_xref": "[KENIA|0151-0162]"
+        }
+      ],
+      "normalized": "The officer’s insignia are consistent with a Major rank in the Sudanese Armed Forces and a patch from the General Intelligence Service.",
+      "history": "Initial",
+      "xref": "[KENIA|0153-015F]",
+      "type": "social_designation",
+      "subtype": "rank_and_unit",
+      "attribute": [
+        {
+          "taxonomy": "SocialDesignation.Rank",
+          "value": "Major"
+        },
+        {
+          "taxonomy": "SocialDesignation.UnitAssignment",
+          "value": "General Intelligence Service (Sudan)"
+        }
+      ]
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Unidentified Sudanese soldier (Salha videos)",
+      "description": "a young Sudanese soldier seen in the depot and outdoors near Salha",
+      "full_classification": "Entity > MaterialEntity > Person > MilitaryOfficer",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|016D-0175]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The unidentified young Sudanese soldier was geolocated approximately 150 meters from Major Al-Makki in Salha, Omdurman.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.geolocate"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Unidentified Sudanese soldier (Salha videos)",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Al-Makki Abdul Quddus Ahmed",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "Salha (Omdurman)",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|0164-0178]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "All analyzed videos were posted between May 19 and May 21, and Al Jazeera reported that the SAF had regained full control of the area by May 20.",
+      "operative_verb": [
+        "Act.Generic.post",
+        "Act.Generic.report",
+        "LifecycleAndStatus.EventStatus.resolve"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|017A-0187]"
+    }
+  },
+  {
+    "list_object": {
+      "primary_reference": "Kenyan MOD crate label fields",
+      "description": "fields observed on labels of Kenyan munition crates allegedly located in Sudan",
+      "full_classification": "EvidenceSchema > LabelFields",
+      "lists": [
+        {
+          "list_name": "Observed English wording fields",
+          "xref": "[KENIA|019D-01A3]",
+          "list_content": [
+            "Product name",
+            "Contract number",
+            "Batch number",
+            "Quantity",
+            "Volume",
+            "Case number",
+            "Total case number"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Armament Research Services",
+      "description": "an Australian-based arms research consultancy",
+      "full_classification": "Entity > Organization > ResearchOrganization",
+      "alias_list": [
+        "ARES"
+      ],
+      "xref": "[KENIA|01B9-01BF]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Independent armament experts (three)",
+      "description": "three independent weapons/armament specialists consulted on crate markings",
+      "full_classification": "Entity > MaterialEntity > Group > ExpertGroup",
+      "alias_list": [
+        "weapons experts"
+      ],
+      "xref": "[KENIA|01AE-01B1]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Contract 23PTI",
+      "description": "a contract identifier observed on Kenyan-labelled ammunition crates",
+      "full_classification": "Entity > ConventionalEntity > Identifier > ContractNumber",
+      "alias_list": [
+        "No. 23PTI"
+      ],
+      "xref": "[KENIA|01B5-01B7]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "KEMOD-01",
+      "description": "delivery marking indicating Kenyan Ministry of Defence",
+      "full_classification": "Entity > ConventionalEntity > Identifier > DeliveryCode",
+      "alias_list": [
+        "Kenyan Ministry of Defence (delivery code)"
+      ],
+      "xref": "[KENIA|01B7-01B8]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Chris Cobb-Smith",
+      "description": "former Royal Artillery officer; director at Chiron Resources",
+      "full_classification": "Entity > MaterialEntity > Person > SubjectMatterExpert",
+      "alias_list": [
+        "Cobb-Smith",
+        "Cobb"
+      ],
+      "xref": "[KENIA|01CE-01D0]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Chiron Resources",
+      "description": "a consultancy associated with Chris Cobb-Smith",
+      "full_classification": "Entity > Organization > Company",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|01CF-01D0]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "14.5×114mm API cartridges",
+      "description": "armour-piercing incendiary cartridges of 14.5×114mm (.57 calibre)",
+      "full_classification": "Entity > MaterialEntity > PhysicalAsset > Ammunition > HeavyMachineGunAmmo",
+      "alias_list": [
+        "57 calibre API",
+        "14.5×114mm (.57 calibre) API"
+      ],
+      "xref": "[KENIA|01DB-01DC]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "82mm HE Mortar Bomb Type PP87",
+      "description": "high-explosive mortar bomb type PP87 (Chinese-made)",
+      "full_classification": "Entity > MaterialEntity > PhysicalAsset > Ammunition > MortarBomb",
+      "alias_list": [
+        "PP87"
+      ],
+      "xref": "[KENIA|0211-0215]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Contract AMI/KEN/099/2023",
+      "description": "contract identifier associated with Kenyan authorities for PP87 mortar bombs",
+      "full_classification": "Entity > ConventionalEntity > Identifier > ContractNumber",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|021F-0225]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "China Jing An Import & Export Corporation",
+      "description": "Chinese intermediary company referenced on crate labels",
+      "full_classification": "Entity > Organization > Company",
+      "alias_list": [
+        "CJAIE",
+        "China Jing An I&E Corp."
+      ],
+      "xref": "[KENIA|0250-0252]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "7.62mm SMG TYPE CS/LR11",
+      "description": "firearm type designation noted on Kenyan-labelled crate",
+      "full_classification": "Entity > MaterialEntity > PhysicalAsset > Firearm > SubmachineGun",
+      "alias_list": [
+        "CS/LR11"
+      ],
+      "xref": "[KENIA|024E-0257]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "CAT-UXO",
+      "description": "Collective Awareness to Unexploded Ordnance; technical reference source",
+      "full_classification": "Entity > Organization > ResearchOrganization",
+      "alias_list": [
+        "Collective Awareness to Unexploded Ordnance"
+      ],
+      "xref": "[KENIA|028B-028D]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "73-DTG02",
+      "description": "munitions designation believed to correspond to a Chinese 73mm rocket",
+      "full_classification": "Entity > ConventionalEntity > Identifier > OrdnanceDesignation",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0288-0290]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Direction Générale de la réserve Stratégique (Chad)",
+      "description": "General Directorate of Strategic Reserves under the Presidency of Chad",
+      "full_classification": "Entity > Organization > GovernmentAgency",
+      "alias_list": [
+        "DGRS (Chad)"
+      ],
+      "xref": "[KENIA|0282-0287]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Engineering Corps building (Omdurman)",
+      "description": "Sudanese Army Engineering Corps facility in Omdurman",
+      "full_classification": "Entity > Site > GeoSite > Facility > MilitaryFacility",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0274-0276]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Amdjarass airstrip",
+      "description": "airstrip in eastern Chad reportedly used by flights from the UAE",
+      "full_classification": "Entity > Site > GeoSite > Airstrip",
+      "alias_list": [
+        "Amdjarass, eastern Chad"
+      ],
+      "xref": "[KENIA|0296-0298]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Ayin (Sudanese media outlet)",
+      "description": "Sudanese media outlet reporting on RSF-held weapons",
+      "full_classification": "Entity > Organization > MediaOrganization",
+      "alias_list": [
+        "Ayin"
+      ],
+      "xref": "[KENIA|026C-026F]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Sudan Nabaa",
+      "description": "media/source credited alongside X for depot imagery",
+      "full_classification": "Entity > Organization > MediaOrganization",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|01C6-01C6]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Reuters",
+      "description": "international news agency credited for Nairobi RSF meeting photo",
+      "full_classification": "Entity > Organization > MediaOrganization",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|02C6-02C6]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Port Sudan",
+      "description": "city in Sudan housing Chinese charge d’affaires",
+      "full_classification": "Entity > Site > GeoSite > City",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0261-0262]"
+    }
+  },
+  {
+    "entity": {
+      "primary_reference": "Chinese charge d’affaires in Port Sudan",
+      "description": "diplomatic representative of China in Port Sudan (unnamed)",
+      "full_classification": "Entity > MaterialEntity > Person > Diplomat",
+      "alias_list": [
+      ],
+      "xref": "[KENIA|0261-0264]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Bellingcat and Daily Nation shared images of the crates with three independent armament experts.",
+      "operative_verb": [
+        "Act.Generic.share",
+        "IntelligenceOps.Collection.consult"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Daily Nation",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Independent armament experts (three)",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|01AE-01B1]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "All three experts confirmed the markings indicated the crates were part of Contract 23PTI and delivered to Kenyan MoD (KEMOD-01).",
+      "operative_verb": [
+        "IntelligenceOps.Collection.confirm"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Independent armament experts (three)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Contract 23PTI",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "KEMOD-01",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|01B2-01B8]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Armament Research Services assessed the crate markings as consistent with other crates believed delivered on a Kenyan contract.",
+      "operative_verb": [
+        "Act.Generic.assess",
+        "Stance.support"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Armament Research Services",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|01B9-01BF]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Experts indicated many crates show delivery during or after 2024, when Sudan’s civil war was underway.",
+      "operative_verb": [
+        "Act.Generic.indicate",
+        "LifecycleAndStatus.EventTime.timestamp"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Independent armament experts (three)",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|01C7-01CD]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Chris Cobb-Smith stated the batch number suggests packing in 2024, with probable delivery to Kenya the same year; the delivery timing to Sudan is unknown.",
+      "operative_verb": [
+        "Act.Generic.state",
+        "LifecycleAndStatus.EventTime.infer"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Chris Cobb-Smith",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|01CE-01D7]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "All three experts agreed the labels indicated 14.5×114mm API cartridges.",
+      "operative_verb": [
+        "Act.Generic.agree",
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Independent armament experts (three)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "14.5×114mm API cartridges",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|01D8-01DC]"
+    }
+  },
+  {
+    "aspect": {
+      "subject_ref_list": [
+        {
+          "subject_type": "entity",
+          "subject_reference": "14.5×114mm API cartridges",
+          "subject_xref": "[KENIA|01DB-01DC]"
+        }
+      ],
+      "normalized": "The 14.5×114mm is a heavy machine-gun and anti-materiel rifle cartridge used historically by the Soviet Union and Warsaw Pact states and by modern Russia and others.",
+      "history": "Initial",
+      "xref": "[KENIA|01DD-01E2]",
+      "type": "technical_profile",
+      "subtype": "use_and_platform",
+      "attribute": [
+        {
+          "taxonomy": "Use.Platform",
+          "value": "HMG, anti-materiel rifle"
+        }
+      ]
+    }
+  },
+  {
+    "list_object": {
+      "primary_reference": "14.5×114mm manufacturing countries (non-exhaustive)",
+      "description": "countries where 14.5×114mm cartridges have been manufactured, per expert statement",
+      "full_classification": "EvidenceSchema > List > CountrySet",
+      "lists": [
+        {
+          "list_name": "Stated manufacturers",
+          "xref": "[KENIA|01E3-01EA]",
+          "list_content": [
+            "Bulgaria",
+            "China",
+            "Egypt",
+            "Hungary",
+            "Iraq",
+            "North Korea",
+            "Poland",
+            "Romania",
+            "Russia",
+            "Czechoslovakia (former)"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Video from the Salha depot shows cans inside crates; at least one open can next to the crates contained visible ammunition consistent with the crate label specifications.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.observe",
+        "IntelligenceOps.Collection.verify"
+      ],
+      "participants": [
+      ],
+      "xref": "[KENIA|01EB-01F4]"
+    }
+  },
+  {
+    "aspect": {
+      "subject_ref_list": [
+        {
+          "subject_type": "entity",
+          "subject_reference": "14.5×114mm API cartridges",
+          "subject_xref": "[KENIA|01DB-01DC]"
+        }
+      ],
+      "normalized": "Observed visible features include a green-coloured case and a black tip.",
+      "history": "Initial",
+      "xref": "[KENIA|01F5-020B]",
+      "type": "technical_profile",
+      "subtype": "markings_and_colour",
+      "attribute": [
+        {
+          "taxonomy": "Colour.Case",
+          "value": "Green"
+        },
+        {
+          "taxonomy": "Colour.Tip",
+          "value": "Black"
+        }
+      ]
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Two additional green crates in the Salha depot bore labels indicating 82mm HE Mortar Bomb Type PP87.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "82mm HE Mortar Bomb Type PP87",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|020C-021D]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Experts stated the PP87 crate markings suggest initial delivery to Kenyan authorities under Contract AMI/KEN/099/2023.",
+      "operative_verb": [
+        "Act.Generic.state",
+        "IntelligenceOps.Collection.infer"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Independent armament experts (three)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Contract AMI/KEN/099/2023",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|021F-0225]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Chris Cobb-Smith told Bellingcat that the contract number indicates the Kenyan MoD purchased mortar bombs from China in 2023 and that immediate diversion cannot be determined.",
+      "operative_verb": [
+        "Act.Generic.tell",
+        "Act.Generic.assess"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Chris Cobb-Smith",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Bellingcat",
+          "role": "Affectee"
+        }
+      ],
+      "xref": "[KENIA|0226-022F]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Human Rights Watch reported in 2024 that the RSF appeared to be using the Chinese-made PP87 mortar ammunition and noted it could not verify RSF claims that the rounds were captured from the SAF.",
+      "operative_verb": [
+        "Act.Generic.report",
+        "Stance.qualify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Human Rights Watch",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "82mm HE Mortar Bomb Type PP87",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|0230-023C]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Amnesty International also reported the use of the PP87 weapon in Sudan.",
+      "operative_verb": [
+        "Act.Generic.report"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Amnesty International",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "82mm HE Mortar Bomb Type PP87",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|023D-023F]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "A Chinese-made PP87 mortar bomb was photographed among SAF-captured ammunition in Khartoum, adjacent to a Kenyan-labelled crate marked 7.62mm SMG TYPE CS/LR11, sold by CJAIE.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.photograph",
+        "IntelligenceOps.Collection.display"
+      ],
+      "participants": [
+        {
+          "subject_reference": "82mm HE Mortar Bomb Type PP87",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "China Jing An Import & Export Corporation",
+          "role": "Source"
+        }
+      ],
+      "xref": "[KENIA|0246-025B]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Reports identified multiple Chinese-made weapons in RSF hands; in April the Sudanese government summoned China’s charge d’affaires in Port Sudan over RSF use of Chinese-made drones, and China denied any connection to the RSF.",
+      "operative_verb": [
+        "Act.Generic.identify",
+        "Diplomacy.summon",
+        "Stance.deny"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Chinese charge d’affaires in Port Sudan",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Government of Sudan",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|025D-026B]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Ayin used open sources to identify Chinese-made weapons in the hands of RSF fighters.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.identify"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Ayin (Sudanese media outlet)",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|026C-026F]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "At the Engineering Corps building in Omdurman (15.609734, 32.480369), the SAF displayed alleged captured weapons and ammunition; similar crates were present with stencil labels removed.",
+      "operative_verb": [
+        "IntelligenceOps.Collection.display"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Sudanese Armed Forces",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Engineering Corps building (Omdurman)",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|0270-0278]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "A green box near the crates bore a stencil label referring to Chad’s General Directorate of Strategic Reserves (DGRS).",
+      "operative_verb": [
+        "IntelligenceOps.Collection.read"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Direction Générale de la réserve Stratégique (Chad)",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|027E-0287]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "A label showing designation 73-DTG02 was interpreted by CAT-UXO as a Chinese 73mm HEDP/HEAT with AP HE-Frag fin-stabilised rocket.",
+      "operative_verb": [
+        "Act.Generic.interpret"
+      ],
+      "participants": [
+        {
+          "subject_reference": "CAT-UXO",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "73-DTG02",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|0288-0290]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The UAE has been accused of supplying the RSF via a Chad airstrip; dozens of flights from the UAE appear to have used Amdjarass airstrip since April 2023.",
+      "operative_verb": [
+        "Stance.accuse",
+        "IntelligenceOps.Collection.observe"
+      ],
+      "participants": [
+        {
+          "subject_reference": "United Arab Emirates",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "Amdjarass airstrip",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|0291-0299]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Justin Lynch stated that the discovery of Kenyan-labelled munitions is further evidence of Kenya’s political and logistical support to the RSF, asserting the UAE has used Kenya and other African states as hubs.",
+      "operative_verb": [
+        "Act.Generic.state",
+        "Act.Generic.assess"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Justin Lynch",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Stimulus"
+        },
+        {
+          "subject_reference": "Kenya",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|029A-02A9]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Lynch claimed RSF conferences in Nairobi were immediately followed by a $1.5 billion UAE loan and a surge in suspicious UAE-to-RSF shipments transiting through Kenya.",
+      "operative_verb": [
+        "Act.Generic.claim",
+        "Finance.fund"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Justin Lynch",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "United Arab Emirates",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Kenya",
+          "role": "Stimulus"
+        }
+      ],
+      "xref": "[KENIA|02AA-02B2]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Kenya is reported to draw down the first $500 million tranche from a $1.5 billion UAE-backed commercial loan next week.",
+      "operative_verb": [
+        "Finance.disburse",
+        "Act.Generic.report"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Kenya",
+          "role": "Affectee"
+        },
+        {
+          "subject_reference": "United Arab Emirates",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|02B3-02B9]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "On February 18, 2025, RSF-affiliated delegates in Nairobi attended a meeting for a planned political charter toward a 'Government of Peace and Unity' for RSF-held territories; the signing was later postponed.",
+      "operative_verb": [
+        "Act.Generic.meet",
+        "Governance.plan",
+        "LifecycleAndStatus.EventStatus.postpone"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "Nairobi",
+          "role": "Destination"
+        }
+      ],
+      "xref": "[KENIA|02BA-02C5]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "Despite setbacks in the capital, the RSF controls large areas including Darfur, where violence contributes to one of the world’s worst humanitarian crises according to the UN.",
+      "operative_verb": [
+        "LifecycleAndStatus.EventStatus.persist",
+        "Act.Generic.report"
+      ],
+      "participants": [
+        {
+          "subject_reference": "Rapid Support Forces",
+          "role": "Affector"
+        },
+        {
+          "subject_reference": "United Nations",
+          "role": "Affector"
+        }
+      ],
+      "xref": "[KENIA|02C6-02D1]"
+    }
+  },
+  {
+    "actuality": {
+      "normalized": "The article has been updated to reflect new information.",
+      "operative_verb": [
+        "LifecycleAndStatus.Versioning.update"
+      ],
+      "participants": [
+      ],
+      "xref": "[KENIA|02D8-02D9]"
+    }
+  }
+]
