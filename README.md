@@ -1,177 +1,107 @@
-# **RCI Interpreter — README**
+# **Renyxa Cognitive Inventory (RCI)**
 
-## Overview
-
-The **RCI Interpreter** is a deterministic analytical engine designed to operate entirely within an LLM (Large Language Model) session. It processes structured RCI profiles to extract actionable intelligence and support in‑depth analytical tasks.
-
-For a full architectural overview of the Renyxa Cognitive Inventory (RCI) and its analytical methodology, please refer to the **[RCI Whitepaper](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/docs/RCI-whitepaper.pdf).**   
-
-For brief review of analytical capabilities of the RCI framework please refer to the **[RCI OVerview](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/docs/RCI-overview.pdf).**
+### *Analytical Intelligence at Machine Speed*
 
 ---
 
-## Key Features
+## 🔹 What is RCI?
 
-The RCI Interpreter performs the following operations:
+**Renyxa Cognitive Inventory (RCI)** is a next-generation analytical engine designed for **structured, high-fidelity, and fully auditable analysis** of complex or unstructured source material.
 
-- Entity and alias unification
+RCI was purpose-built for the most demanding environments — **national security, intelligence, competitive analysis, and sensitive operations** — where accuracy, provenance, and explainability are paramount.
 
-- Action and event extraction
-
-- Timeline, causal chain, and dependency chain construction
-
-- XREF‑grounded reasoning
-
-- Graph‑ready output generation
-
-The Interpreter **does not hallucinate** and does not use external knowledge unless explicitly provided. It operates strictly on structured RCI profile data uploaded by the user.
+RCI bridges the gap between raw information and actionable insight, empowering agencies and AI partners with **human-level symbolic reasoning, explainable knowledge extraction, and deterministic analytics — delivered at machine speed.**
 
 ---
 
-## Compatibility Notice (November 2025)
+## 🔹 How RCI Works
 
-**Only Kimi K2 (Moonshot AI)** currently supports the deterministic interpreter mode required by RCI.
+RCI leverages advanced **LLM-driven interpretation** to convert any source text — from HUMINT or OSINT field reports to legal or historical documents — into richly structured, query-ready analytical profiles.
 
-Recent updates to **OpenAI’s GPT‑5.x lineage** removed the prompt‑controlled deterministic mode formerly available in GPT‑5.0, making GPT‑5.x incompatible with RCI execution.
+### Core Workflow
 
-Because Kimi does not support ODS–IFSN reconciliation, **all automated analysis now runs strictly from the IFSN file**:
+- **Narrative normalization** — Raw documents are broken down into atomic, auditable statements, each tagged for full provenance.
+- **Entity and event extraction** — Every actor, alias, object, and event is identified, uniquely tagged, and cross-referenced.
+- **Timeline and dependency mapping** — Events and relationships are sequenced, mapped, and causally linked.
+- **Semantic and symbolic reasoning** — The system answers deep analytical questions and generates graphs, timelines, and cross-entity reports — all with full traceability.
+- **Provenance and audit** — Every fact and inference maps back to its exact source, ensuring operational and legal defensibility.
 
-- **IFSN** = Machine‑readable, LLM‑driven analysis
-
-- **ODS** = Human‑only analytical reference (not uploaded to Kimi)
-
-- **NRM** = Human‑only provenance and audit document (not uploaded to Kimi)
-
-In future **local LLM deployments**, full ODS/IFSN reconciliation will be restored.
+> **Example:** RCI can process multi-source intelligence reports or even model the *Book of Genesis* — performing full semantic analysis of one of the most complex narratives ever written.
 
 ---
 
-## Getting Started
+## 🔹 What Makes RCI Unique
 
-### **1. Start a New Kimi K2 Chat**
+### • Deterministic, Zero-Hallucination Analytics
 
-- Visit: **[https://kimi.moonshot.cn](https://kimi.moonshot.cn)** (or your enterprise endpoint).
+RCI operates in a strictly controlled, evidence-preserving mode. It never fabricates facts or blends external knowledge unless explicitly provided. Every analytical decision is explainable.
 
-- Create a **new chat session with zero prior context**.  
-  Every RCI analysis must begin in a fresh session.
+### • Machine–Human Collaboration
 
----
+Human analysts and automated LLMs work from the same normalized, cross-referenced profiles — ensuring fidelity, repeatability, and seamless audit across manual and machine-driven analysis.
 
-### **2. Upload the IFSN Open‑Source Specification**
+### • Symbolic & Semantic Reasoning at Scale
 
-Upload the following file:
+RCI creates knowledge graphs, event timelines, and actionable dossiers — instantly answering questions that would take human teams weeks, while preserving every detail and source chain.
 
-- `/RCI-interpreter/IFSN-open-source-spec.txt`
+### • Extreme Versatility
 
-Drag and drop it into the Kimi chat.  
-Kimi will acknowledge receipt.
+RCI profiles can be generated from field reports, regulatory filings, open-source feeds, technical logs, or even ancient texts.  
+The *Genesis Demo Project* demonstrates RCI’s ability to model complex, multi-layered narratives with full provenance.
 
-> **Do not upload ODS, NRM, or any other supporting files.**  
-> Uploading unrecognized files may disrupt or impair Interpreter operation.
+### • Integration-Ready Architecture
 
----
-
-### **3. Upload Your Project‑Specific IFSN File**
-
-Upload the IFSN profile for your project:
-
-- Format: `<project-name>-IFSN.txt`  
-  Example: `KENIA-IFSN.txt`
-
-This file contains the structured RCI profile that the Interpreter analyzes.
-
-Kimi will acknowledge upload.
+Built for interoperability with AI and analytics platforms such as **Palantir**, **C3.ai**, and **Dataminr**, RCI outputs are standards-based (`JSON`, graph data, semantic triples) and ready for downstream analysis and visualization.
 
 ---
 
-### **4. Begin Issuing Interpreter Tasks and Queries**
+## 🔹 Core Capabilities
 
-Once the IFSN spec and your project IFSN file are loaded, you may issue any RCI‑style analytical request.
-
-#### **Example Queries**
-
-- “Create a Mermaid timeline diagram of major events across the entire timeframe.”
-
-- “List all financial transactions over $1,000,000 between December 2004 and January 2009, including sender, receiver, date, and amount.”
-
-- “List all referenced government agencies along with their actions, dates, locations, and taskforce names.”
-
-- “Create dossiers on all individuals flagged for terrorist activity, including known status and last known location.”
+- **Entity & Alias Unification:** Resolves all aliases, alternate spellings, and symbolic references for robust link analysis.
+- **Action & Event Extraction:** Maps verbs, events, actions, and relationships with timestamps when available.
+- **Causal & Temporal Reasoning:** Builds timelines, dependency chains, and cause-effect maps for “what-if” and network analysis.
+- **Audit-Grade Provenance:** Every assertion is cross-referenced to its source for total transparency and auditability.
+- **Graph-Ready Output:** Directly consumable by graph analytics, timeline, and visualization tools.
+- **Custom Querying:** Instantly generate analytical products — diagrams, dossiers, financial lists, event chronologies, and more.
+- **Human & Machine Parity:** Analysts and LLMs operate from the same profiles, ensuring repeatable, explainable results.
 
 ---
 
-## **What NOT to Do**
+## 🔹 Demo Project Contents
 
-- **Do NOT** upload ODS, NRM, Alias files, or any files other than the IFSN spec and your project IFSN profile.
+Each RCI demo project typically includes:
 
-- **Do NOT** use GPT‑5.x or any GPT model for RCI execution; these models no longer support deterministic control.
+| File | Purpose |
+| --- | --- |
+| **NRM file** | Normalized, cross-referenced source document for human audit. |
+| **ODS file** | Ontology-Driven Scaffolding for deep semantic review (future machine-use). |
+| **Aliases file** | All recognized aliases and alternate names for entity linkage. |
+| **IFSN file** | Machine-readable, inference-free semantic profile (core input). |
+| **/deliverables** | Example outputs — timelines, graphs, reports — generated by RCI. |
 
-- **Do NOT** mix profile sets or upload partial profiles.
-
-- **Do NOT** upload non‑RCI, irrelevant, or unsupported files into the session.
-
----
-
-## **What is in the Demo Project**
-
-The `/demo` directory contains a sample RCI project illustrating how a full analytical package is structured. Its typical components include:
-
-### **NRM File (`*-NRM.txt`)**
-
-A **normalized source document** with XREF markers for audit, provenance, and transparency.  
-It is **never used for automated analysis** and serves exclusively as a **human‑reference document**.
-
-### **ODS File (`*-ODS.json`)**
-
-The **Ontology Driven Scaffolding**, used today only for **human analytical review**.  
-It provides a fully structured ontology of the source, enabling manual inspection of the analytical framework.
-
-> In future **local LLM deployments**, the ODS will be restored as an operational component in automated analysis workflows.
-
-### **Aliases File (`*-aliases.txt`)**
-
-Contains the full alias map for entities, organizations, locations, and other elements.  
-This ensures **complete symbolic and semantic search coverage**, enabling comprehensive entity unification in human or machine contexts.
-
-### **IFSN File (`*-IFSN.txt`)**
-
-The core machine‑readable semantic profile.  
-This is the only **project data file uploaded to Kimi** for automated analysis.
-
-### **/deliverables Folder**
-
-Contains example output generated by earlier RCI Interpreter sessions.  
-These may include:
-
-- Structured analytical reports
-
-- Diagrams (e.g., timelines, graphs, relationship charts)
-
-- Event lists
-
-- Entity summaries
-
-These files **demonstrate the analytical capabilities** of the RCI framework using the demo dataset.
+> **Genesis Demo:** RCI successfully profiled and analyzed the *Book of Genesis*, mapping every entity, action, and relationship across the entire narrative — a world-first demonstration of large-scale, provenance-preserving analysis.
 
 ---
 
-## Disclaimers
+## 🔹 Partnership & Mission Alignment
 
-Renyxa Cognitive Inventory is under continuous development. Analytical logic, specifications, and workflows may evolve. Documentation will be updated as changes occur.
+RCI is designed for rapid adoption by **government agencies**, **intelligence services**, and **AI integrators**.
 
-The IFSN open‑source specification enables full analysis of field‑grade RCI profiles derived from HUMINT/OSINT sources.  
-Sample canonical profiles are provided in `/demo` for testing.
-
-Creating your own profiles using only the open‑source specs may yield semantically incomplete or logically invalid structures. Such profiles are **not suitable for field analysis**. The Project Owner assumes no responsibility for misuse or resulting damages.
+- **CIA, DoD, Mossad, and allied intelligence services** — Enables explainable, rapid intelligence product generation across HUMINT, OSINT, SIGINT, and data-fusion domains.
+- **AI & Analytics Industry (Palantir, C3.ai, Dataminr, etc.)** — Provides a standards-based reasoning layer that structures and enriches narrative data for deeper analytic use.
+- **Custom Deployments** — Available for on-premise or secure-cloud deployment; future-proofed for local LLM integration and classified use.
 
 ---
 
-## Support
+## 🔹 Bottom Line
 
-For questions, feedback, or contributions:
+**RCI transforms raw, ambiguous narratives into actionable, structured insight — instantly, verifiably, and at scale.**  
+It is the engine that places explainable AI at the heart of next-generation mission-critical analytics.
 
-- **Open an Issue:**  
-  https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/issues
+---
 
-- **Contact the Project Owner:**  
-  See contact details in the repository.
+📄 **Full Documentation & Source Code:**  
+👉 [RCI Overview (PDF)](./RCI-overview.pdf)  
+👉 [GitHub Repository Home](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory)
+
+---
