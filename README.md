@@ -3,6 +3,9 @@
 ### *Analytical Intelligence at Machine Speed*
 
 ---
+### For quick evaluation go to [RCI Interpreter](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/docs/RCI-interpreter.pdf)
+---
+
 
 ## 🔹 What is RCI?
 
