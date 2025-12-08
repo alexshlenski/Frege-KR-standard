@@ -14,7 +14,7 @@
 By providing a structured, reversible, and fully explicit representation of who did what, when, why, and under what conditions, FREGE-2.1 enables explainable machine reasoning, narrative reconstruction, and audit-grade intelligence products.
 
 This document outlines FREGE’s operational role in intelligence workflows, including OSINT fusion, deception detection, ISR pipelines, and structured threat analysis.  
-The **formal specification** is published separately in the [open-source standard]([https://github.com/open-frege/specification-v2.1](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/open-source/FREGE-open-source.txt))
+The **formal specification** is published separately in the [open-source standard](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory/blob/main/open-source/FREGE-open-source.txt)
 
 ---
 
