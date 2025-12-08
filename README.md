@@ -1,111 +1,178 @@
-# **Renyxa Cognitive Inventory (RCI)**
+# FREGE-2.1  
+## Canonical Semantic Interface for Strategic Intelligence Systems
 
-### *Fully Automated Analytical Intelligence at Machine Speed*
-
----
-[![PDF](https://img.shields.io/badge/View-RCI%20Overview-blue?logo=adobeacrobatreader)](./docs/RCI-overview.pdf)
-[![Interpreter](https://img.shields.io/badge/View-RCI%20Interpreter-green?logo=readthedocs)](./docs/RCI-interpreter.pdf)
-[![FAQ](https://img.shields.io/badge/View-RCI%20FAQ-orange?logo=bookstack)](./docs/RCI-FAQ.pdf)
----
-
-## 🔹 What is RCI?
-
-**Renyxa Cognitive Inventory (RCI)** is a next-generation analytical engine designed for **structured, high-fidelity, and fully auditable analysis** of complex or unstructured source material.
-
-RCI was purpose-built for the most demanding environments — **national security, intelligence, competitive analysis, and sensitive operations** — where accuracy, provenance, and explainability are paramount.
-
-RCI bridges the gap between raw information and actionable insight, empowering agencies and AI partners with **human-level symbolic reasoning, explainable knowledge extraction, and deterministic analytics — delivered at machine speed.**
+**Whitepaper — Operational and Cognitive Applications in the Intelligence Domain**  
+**Version:** 2.1  
+**Date:** December 2025  
 
 ---
 
-## 🔹 How RCI Works
+## Abstract
 
-RCI leverages advanced **LLM-driven interpretation** to convert any source text — from HUMINT or OSINT field reports to legal or historical documents — into richly structured, query-ready analytical profiles.
+**FREGE-2.1** is a canonical semantic interface designed to expose the internal representation of meaning within transformer-based models. Unlike traditional approaches based on symbolic grammars or black-box generation, FREGE captures meaning deterministically as a **topological and geometric structure** — the *semantic eidos*.
 
-### Core Workflow
+By providing a structured, reversible, and fully explicit representation of who did what, when, why, and under what conditions, FREGE-2.1 enables explainable machine reasoning, narrative reconstruction, and audit-grade intelligence products.
 
-- **Narrative normalization** — Raw documents are broken down into atomic, auditable statements, each tagged for full provenance.
-- **Entity and event extraction** — Every actor, alias, object, and event is identified, uniquely tagged, and cross-referenced.
-- **Timeline and dependency mapping** — Events and relationships are sequenced, mapped, and causally linked.
-- **Semantic and symbolic reasoning** — The system answers deep analytical questions and generates graphs, timelines, and cross-entity reports — all with full traceability.
-- **Provenance and audit** — Every fact and inference maps back to its exact source, ensuring operational and legal defensibility.
-
-> **Example:** RCI can process multi-source intelligence reports or even model the *Book of Genesis* — performing full semantic analysis of one of the most complex narratives ever written.
+This document outlines FREGE’s operational role in intelligence workflows, including OSINT fusion, deception detection, ISR pipelines, and structured threat analysis.  
+The **formal specification** is published separately in the [open-source standard](https://github.com/open-frege/specification-v2.1) *(placeholder link)*.
 
 ---
 
-## 🔹 What Makes RCI Unique
+## 1. Introduction: From Surface to Meaning
 
-### • Deterministic, Zero-Hallucination Analytics
+In intelligence work, **meaning** matters more than language. Threats are inferred from actions, intent from context, and structure from fragmentation.  
+Yet most language technologies operate at the level of surface variation — summarization, translation, keyword extraction.
 
-RCI operates in a strictly controlled, evidence-preserving mode. It never fabricates facts or blends external knowledge unless explicitly provided. Every analytical decision is explainable.
+**FREGE-2.1** bypasses the surface. It exposes the transformer’s recovered **semantic object** — a cognitive map of entities, events, and relations.  
+It makes this structure **explicit**: not inferred, not guessed, not hidden behind prompts.
 
-### • Machine–Human Collaboration
-
-Human analysts and automated LLMs work from the same normalized, cross-referenced profiles — ensuring fidelity, repeatability, and seamless audit across manual and machine-driven analysis.
-
-### • Symbolic & Semantic Reasoning at Scale
-
-RCI creates knowledge graphs, event timelines, and actionable dossiers — instantly answering questions that would take human teams weeks, while preserving every detail and source chain.
-
-### • Extreme Versatility
-
-RCI profiles can be generated from field reports, regulatory filings, open-source feeds, technical logs, or even ancient texts.  
-The *Genesis Demo Project* demonstrates RCI’s ability to model complex, multi-layered narratives with full provenance.
-
-### • Integration-Ready Architecture
-
-Built for interoperability with AI and analytics platforms such as **Palantir**, **C3.ai**, and **Dataminr**, RCI outputs are standards-based (`JSON`, graph data, semantic triples) and ready for downstream analysis and visualization.
+This allows intelligence analysts, automated systems, and decision-support platforms to operate on **meaning itself** — with full traceability and semantic control.
 
 ---
 
-## 🔹 Core Capabilities
+## 2. The Semantic Eidos: Internal Cognition, External Access
 
-- **Entity & Alias Unification:** Resolves all aliases, alternate spellings, and symbolic references for robust link analysis.
-- **Action & Event Extraction:** Maps verbs, events, actions, and relationships with timestamps when available.
-- **Causal & Temporal Reasoning:** Builds timelines, dependency chains, and cause-effect maps for “what-if” and network analysis.
-- **Audit-Grade Provenance:** Every assertion is cross-referenced to its source for total transparency and auditability.
-- **Graph-Ready Output:** Directly consumable by graph analytics, timeline, and visualization tools.
-- **Custom Querying:** Instantly generate analytical products — diagrams, dossiers, financial lists, event chronologies, and more.
-- **Human & Machine Parity:** Analysts and LLMs operate from the same profiles, ensuring repeatable, explainable results.
+Transformer models do not “understand” in a human sense — but they *do* recover **stable internal objects** from linguistic input.  
+This object — the **semantic eidos** — is what remains invariant under paraphrase, translation, and style.
 
----
+FREGE serializes this eidos as a pair:
 
-## 🔹 Demo Project Contents
+- **Topology**: event-role graphs with logical gates, conditions, sequences  
+- **Geometry**: vectorial configuration of semantic attractors — empirical universals in latent space
 
-Each RCI demo project typically includes:
-
-| File | Purpose |
-| --- | --- |
-| **NRM file** | Normalized, cross-referenced source document for human audit. |
-| **ODS file** | Ontology-Driven Scaffolding for deep semantic review (future machine-use). |
-| **Aliases file** | All recognized aliases and alternate names for entity linkage. |
-| **IFSN file** | Machine-readable, inference-free semantic profile (core input). |
-| **/deliverables** | Example outputs — timelines, graphs, reports — generated by RCI. |
-
-> **Genesis Demo:** RCI successfully profiled and analyzed the *Book of Genesis*, mapping every entity, action, and relationship across the entire narrative — a world-first demonstration of large-scale, provenance-preserving analysis.
+Unlike symbolic systems, which impose structure, or statistical systems, which hallucinate it, FREGE **extracts and exposes** the structure already recovered by the model.
 
 ---
 
-## 🔹 Partnership & Mission Alignment
+## 3. FREGE as a Strategic Standard for Intelligence Workflows
 
-RCI is designed for rapid adoption by **government agencies**, **intelligence services**, and **AI integrators**.
+### 3.1 Role in OSINT/HUMINT Processing
 
-- **CIA, DoD, Mossad, and allied intelligence services** — Enables explainable, rapid intelligence product generation across HUMINT, OSINT, SIGINT, and data-fusion domains.
-- **AI & Analytics Industry (Palantir, C3.ai, Dataminr, etc.)** — Provides a standards-based reasoning layer that structures and enriches narrative data for deeper analytic use.
-- **Custom Deployments** — Available for on-premise or secure-cloud deployment; future-proofed for local LLM integration and classified use.
+FREGE is deployed in pipelines where open-source and human-collected text must be converted into structured, searchable intelligence.
 
----
+Key benefits:
 
-## 🔹 Bottom Line
-
-**RCI transforms raw, ambiguous narratives into actionable, structured insight — instantly, verifiably, and at scale.**  
-It is the engine that places explainable AI at the heart of next-generation mission-critical analytics.
+- Converts unstructured narrative into structured event–entity timelines
+- Supports semantic querying (e.g., "Who acted under what authority in what context?")
+- Enables consistency checking across conflicting reports
+- Preserves document-to-profile parity
 
 ---
 
-📄 **Full Documentation & Source Code:**  
-👉 [RCI Overview (PDF)](./RCI-overview.pdf)  
-👉 [GitHub Repository Home](https://github.com/alexshlenski/Renyxa-Cognitive-Inventory)
+### 3.2 Application to Threat and Campaign Modeling
+
+FREGE-based profiles encode:
+
+- Causal chains of operations
+- Affiliation and actor networks
+- Trigger-action patterns and escalation paths
+- Logical forks and conditional branches
+
+This supports structured simulation of adversary behavior and predictive modeling.
+
+---
+
+### 3.3 Use in ISR and Decision-Support Systems
+
+FREGE integrates with ISR systems via graph APIs and semantic reasoning layers.
+
+Example applications:
+
+- **DPRK negotiations** — causal timeline extraction  
+- **MH17 investigation** — attribution via voiceprint and radar chain-of-custody  
+- **Humanitarian aid mapping** — reconstruction of flows from fragmented reports  
+- **Financial forensics** — schema-based cross-source correlation
+
+Typical outputs include:
+
+- Causal and temporal event chains  
+- Actor-role attribution graphs  
+- Aid/resource pipelines  
+- Logic-gated decision trees
+
+---
+
+## 4. Why FREGE Replaces Traditional Approaches
+
+| Traditional Approach         | FREGE-2.1 Solution                       |
+|-----------------------------|------------------------------------------|
+| Symbolic logic (AMR, RDF)   | Model-aligned geometry + logic topology  |
+| Prompt chains / LLM hacks   | Deterministic, auditable structure       |
+| Keyword tagging             | Complete event-role-circumstantial maps  |
+| NLP parse trees             | Full causal graph                        |
+| Ontology-based pipelines    | Ontology-free, empirical attractor model |
+
+FREGE enables:
+
+- ✅ No hallucination  
+- ✅ Full reversibility  
+- ✅ Native embedding search  
+- ✅ Graph tooling compatibility  
+- ✅ Audit-grade semantic fidelity
+
+---
+
+## 5. Deployment and Integration
+
+FREGE profiles are generated by **deterministic Builders** under strict structural protocols.
+
+Each sentence produces:
+
+- XREF identifiers  
+- Graph of entities, events, circumstantials  
+- Linkage into broader narrative or incident graph
+
+Output formats:
+
+- JSON Graph  
+- GraphML  
+- RDF-compatible stream  
+- Integration-ready for Palantir, C3, and ISR frameworks
+
+---
+
+## 6. Specification and Compliance
+
+The formal specification of FREGE-2.1 is maintained as an **open standard**:
+
+- Entity blocks: `ENT`, `ENB`  
+- Event and routine graphs: `EVT`, `RTN`  
+- Circumstantials: `CRB`, `CIR`  
+- Classification: `CPL`, `SET`  
+- Logical control: `CNJ`, with `IF`, `ELSE`, `AND`, `OR`, `NOT`  
+- Microsemantic structures: `VSC`, `LNK`
+
+All builders must enforce:
+
+- Full surface fidelity  
+- Zero summarization  
+- Structural completeness  
+- Canonical identity reuse
+
+**Reference**: [https://github.com/open-frege/specification-v2.1](https://github.com/open-frege/specification-v2.1) *(spec repo placeholder)*
+
+---
+
+## 7. Conclusion
+
+FREGE-2.1 is not a parser, not a markup, not a language.  
+It is a **semantic interface standard** for exposing the recovered cognition of large language models.
+
+For intelligence systems, it enables:
+
+- Structured reasoning  
+- Causal and event modeling  
+- Attribution and audit  
+- Simulations and counterfactuals
+
+Where surface language is ambiguous, FREGE offers precision.  
+Where traditional NLP fails to generalize, FREGE offers structure.  
+Where explanation is needed, FREGE provides clarity.
+
+---
+
+## License
+
+FREGE-2.1 and its specification are open-source under the [MIT License](LICENSE).
 
 ---
