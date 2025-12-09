@@ -9,10 +9,11 @@
 
 ### **Quick Look: FAAP Deliverables**
 Explore what FAAP can autonomously generate from unstructured text—complex timelines, causal chains, semantic reasoning flows, and full multi-actor operational graphs.
+Tip: Open the extra large diagrams in a separate tab and zoom in.
 
 <p align="center">
 
-<a href="https://raw.githubusercontent.com/alexshlenski/Frege-Automated-Analytical-Platform/main/deliverables/primeval-timeline.png">
+<a href="https://github.com/alexshlenski/Frege-Automated-Analytical-Platform/blob/main/demo/DPRK/deliverables/aid-overall.png">
   <img src="https://img.shields.io/badge/View%20Semantic%20Timeline-%23007acc?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgNWMyLjc2MSAwIDUgMi4yMzk1IDUgNXMtMi4yMzk5IDUtNSA1LTUtMi4yMzk1LTUtNSA1LTIuMjM5NSA1LTUgNXptMCAyYy0xLjY1MiAwLTMgMS4zNDgtMyAzcyAxLjM0OCAzIDMgMyAzLTEuMzQ4IDMtMy0xLjM0OC0zLTMtM3oiLz48L3N2Zz4=" />
 </a>
 
