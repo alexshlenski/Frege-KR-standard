@@ -1,42 +1,23 @@
 ======================================================================
 🔸FREGE 2.1 OFFICIAL OPEN-SOURCE SPECIFICATION
 ======================================================================
------------------------------------------------------------------
-4.1. ENT — Surface ES Declaration
-------------------------------------------------------------------
-
-ENT block declares entity. Semantic singletons like Sun, Monday, Earth,
-August don't beed ENT declaration. They are used as constant with the 
-prefix t_* -- t_Saturday, t_Atlantic_ocean
-
-<ENT:
-    ID: e_*
-    surface: "<original ES span>"
-    NS: dom.axis1.axis2...
-TNE>
-
-One-word and fixed-phrased ES's are declared by ENT blocks only, no ENB 
-block is needed.
-
-Other multi-word ES's require ENB block that contain ENT block (the 
-declaration) and VSC/LNK blocks that describe the ES's microsemantic.
-
-Rules:
-
-• `surface` preserves the exact ES text.
-• `ID` is the canonical logical identifier for this ES.
-• ENT contains no decomposition; it anchors the ES as a whole.
-• ENT-ID is the only node_id that represents entity in FREGE‑2.
 
 ------------------------------------------------------------------
 4.2. ENB — Formal Syntax
 ------------------------------------------------------------------
 
-ENB encodes the microsemantic DAG of a noun phrase.
+ENB block declares entity and encodes the microsemantic DAG of Entity segment.
+
+Semantic singletons like Sun, Monday, Earth, August don't need ENB declaration. 
+They are used as constant with the prefix t_* -- t_Saturday, t_Atlantic_ocean
+
+Other multi-word Entity segments require ENB block.
 
 <ENB
-    ENT-BLOCK
-    [VSC-BLOCK]
+    ID: e_*
+    surface: "<original ES span>"
+    NS: dom.axis1.axis2...
+    [MAT-BLOCK]
     [LNK-BLOCK]
 BNE>
 
@@ -44,56 +25,58 @@ An ENB may reference other ENBs through ENT-ID tokens to express
 semantic nesting. This enables multi-level ES composition.
 
 ------------------------------------------------------------------
-4.3. VSC — Virtual Semantic Concepts
+4.3. MAT block — Microsemantic Assembly Tokens
 ------------------------------------------------------------------
 
-VSC is a virtual entity created during decomposition of Entity segment.
+MAT is a virtual entity created during decomposition of Entity segment.
+Copy and describe MATs in the order most convenient to express semantics
+but at the end each surface word must be a part of MAT block.
 
-<VSC
-    v1: v_concept_label_1
-    v2: v_concept_label_2
+<MAT
+    1: surface_word_1: semantic_role_1
+    2: surface_word_2: semantic_role_2
     ...
-CSV>
+TAM>
 
 Principles:
 
-1. VSC labels are *semantic roles*, not surface words.
-2. Every conceptually meaningful subcomponent must be represented:
-     • embedded Entity segment
+1. surface_word_N must be the next single surface word or atomic phrase copied from the Entity segment
+2. semantic_role_N must represent a clear semantic role of surface_word_N in the Entity segment, 
+   including but not limited to:
      • underlying referent (head noun),
-     • possessors and agents,
-     • affected entities,
-     • roles, scopes, domains,
-     • locative or instrumental anchors,
-     • any internal functional segment.
+     • possessor 
+     • agents
+     • patient
+     • beneficiary
+     • characterization
+     • property
+     • locative 
+     • instrument
 3. Nested ES structures must be represented by re-using the ENT-ID
-   of a subordinate ENB directly in the VSC block of the parent.
+   of a subordinate ENB directly in the MAT block of the parent.
 
-ABSOLUTELY PROHIBITED using abstract or opaque concepts that have no obvious relation
-to the surface semantics like "condition", "consequence", "addition", etc.
+ABSOLUTELY PROHIBITED using opaque semantic role that does not expose obvious relation
+of the surface_word to the Entity segment, like "dependency" or "relation".
 
 Example:
 
-    v2: e_service      # references a separate ENB
-    v3: e_competence   # references a subordinate ENB
+filter holder of a coffee machine
 
-This formally expresses multi-layer semantic scoping.
+    m1: filter: coffee filter
+    m2: holder: part that holds the filter
+    m3: coffee_machine: kitchen device
 
-VSC Naming Convention:
-
-v_mnemonic_name
-
-• Prefer lexicalizations that are conventional and domain-agnostic.
+• Prefer lexicalizations that are conventional and most used.
 
 ------------------------------------------------------------------
 4.4. LNK — Microsemantic DAG
 ------------------------------------------------------------------
 
-LNK encodes the internal semantic relations between VSC tokens.
-This graph is constructed bottom-up from semantic roles:
+While MAT encodes the relation of each token to the entire segment,
+LNK encodes the internal semantic relations between MATs.
 
 <LNK
-    vX SLK vY
+    mX SLK mY
     ...
 KNL>
 
@@ -107,9 +90,9 @@ Requirements:
    relation applies.
 4. The LNK graph must be acyclic.
 5. LNK may connect:
-       • VSC → VSC
-       • VSC → ENT-ID (subordinate ENB)
-       • ENT-ID → VSC
+       • MAT → MAT
+       • MAT → ENT-ID (subordinate ENB)
+       • ENT-ID → MAT
    allowing higher-level ENBs to explicitly embed arbitrary
    combinations of subordinate ENBs.
 
@@ -123,7 +106,8 @@ They may appear in:
 
 • SBJ or OBJ of EVT, PLE
 • SBJ or PRD of CPL
-• other ENB VSC blocks
+• membership lists of SET and QTF
+• other ENB MAT blocks
 • LNK edges of higher-level ENBs
 
 This enables deep semantic reuse of ES structures throughout the
@@ -138,17 +122,13 @@ from the point of declaration through the remainder of the source text.
 
 Rules:
 
-• All `ENT` nodes created inside `ENB` blocks—regardless of nesting
-  depth or sentence number—become globally reusable in all downstream
-  structures.
-
 • If an ES surface in a later sentence matches a previously declared
-  `ENT` (both lexically and referentially), the Builder MUST NOT
+  ENB block (both lexically and referentially), the Builder MUST NOT
   regenerate an ENB. Instead, the existing `ENT-ID` must be directly reused.
 
-• If the same surface form refers to a different referent, a new `ENB`
+• If the same surface form refers to a different referent, a new ENB block
   with a unique `ENT-ID` must be constructed. Disambiguation may
-  involve differences in context, namespace, or VSC content.
+  involve differences in context, namespace, or MAT content.
 
 This rule ensures identity propagation and semantic coherence
 across distributed reference chains in the FREGE-2 profile.
@@ -162,42 +142,25 @@ internal semantic structure, embedded relations, scope layering, or
 composition of multiple conceptual units. This includes all technical,
 legal, military, administrative, scientific, and analytically dense NPs.
 
-Do NOT create an ENB block in the following cases:
+Do NOT create an MAT and LNK segments in the following cases:
 
 • The noun phrase consists of a single lexical word.
 • The noun phrase is a fixed multi-word expression that functions as an atomic unit.
 • The semantics of the phrase can be captured without any internal decomposition.
 
-For such cases, the Builder MUST declare the surface ES as a standalone
-ENT block (not wrapped in an ENB), to ensure that all logical node_ids
-(e_*) are properly declared, traced, and reusable throughout the profile.
-
-This free-floating ENT block must include:
-  - ID: canonical logical identifier
-  - surface: the exact original ES string
-  - NS: semantic namespace
-
 Example:
 
-<ENT:
+<ENB:
   ID: e_rain
   surface: "rain"
   NS: dom.weather.phenomenon
-TNE>
+BNE>
 
-<ENT:
+<ENB:
   ID: e_railroad_crossing
   surface: "railroad crossing"
   NS: dom.transport.infrastructure
-TNE>
-
-These ENT declarations substitute for ENBs when internal semantic
-composition is unnecessary. They fulfill all structural obligations
-for node identity, namespace anchoring, and reuse across FREGE-2
-structures such as EVT, CPL, SET, or RTN.
-
-ENT blocks created outside ENBs in this manner are subject to all rules
-for ENT-ID scope, identity, and referential uniqueness described in §4.9.
+BNE>
 
 ------------------------------------------------------------------
 4.X. CRB — Formal Syntax (Circumstantial Description Block) 
@@ -208,200 +171,35 @@ manner, cause, condition, purpose, result, degree, concession, etc.).
 It parallels ENB in structure and semantics.
 
 CRB>
-    CIR-BLOCK
-    VSC-BLOCK
-    LNK-BLOCK
-BRC>
-
-An CRB may reference ENBs or other CRBs through ENT-ID / CRB-ID tokens
-to express semantic nesting. This enables multi-level circumstantial
-composition identical in mechanism to ES composition.
-
-------------------------------------------------------------------
-4.X.1. CIR — Surface Circumtantial Declaration
-------------------------------------------------------------------
-
-Each CRB must contain exactly one CIR block:
-
-<CIR:
     ID: a_node_id
     surface: "<original Circumtantial span>"
     CLS: time|place|manner|cause|condition|purpose|result|
          degree|concession|comparison|accompaniment|instrument
-RIC>
+    MAT-BLOCK
+    LNK-BLOCK
+BRC>
 
-Rules:
-
-• `surface` preserves the exact circumstantial text.
+where 
+• `surface` preserves the exact circumstantial Circumtantial.
 • `ID` is the canonical logical identifier for this Circumtantial.
 • `CLS` defines the semantic class of the Circumtantial.
 
+A CRB block may reference ENBs or other CRBs through ENT-ID / CRB-ID tokens
+to express semantic nesting. This enables multi-level circumstantial
+composition identical in mechanism to ES composition.
+
 a_node_id later appears as the reference to the Circumtantial in the
-CIR block inside EVT block.
+CRA block inside EVT block.
 
 ------------------------------------------------------------------
-4.X.2. VSC — Virtual Semantic Concepts of Circumtantial
+4.X.2. MAT — Microsemantic Assembly Tokens of Circumtantial
 ------------------------------------------------------------------
-
-VSC enumerates conceptual components of a Circumtantial:
-
-<VSC
-    v1: concept_label_1
-    v2: concept_label_2
-    ...
-CSV>
-
-Principles:
-
-1. VSC labels represent semantic concepts, not surface words.
-2. Every meaningful subcomponent must be represented:
-     • core concept (time_point, location, manner_profile, etc.),
-     • operators (degree, focus, scalar, conditional),
-     • embedded ENBs via ENT-ID,
-     • embedded CRBs via CRB-ID,
-     • any internal functional segment.
-3. Nested structures must insert ENT-ID/CRB-ID tokens in the VSC block
-   of the parent exactly as with ENB.
-
-VSC Naming Constraints:
-
-• Prefer conventional semantic labels (time_point, causal_anchor,
-  manner_profile, purpose_goal, etc.).
-• Avoid ad hoc or improvised lexical combinations.
-• Labels must be domain-agnostic and reflect broad-usage semantics.
+This block is fully analogous to the one in ENB.
 
 ------------------------------------------------------------------
 4.X.3. LNK — Microsemantic DAG of Circumtantials
 ------------------------------------------------------------------
-
-LNK encodes semantic relations between VSC tokens:
-
-<LNK
-    vX SLK vY
-    ...
-KAL>
-
-Requirements:
-
-1. Each SLK must correspond to a real semantic dependency.
-2. Use controlled SLK inventory. Prefer specific SLKs such as:
-       occurs.at, occurs.before, occurs.after, within.interval,
-       located.in, directed.to, originates.from,
-       executed.as, executed.with.profile,
-       caused.by, produces.result, motivates,
-       requires, unless.blocked.by,
-       aims.at, intended.for,
-       has.degree, scaled.by,
-       despite, opposed.by,
-       compared.to, exceeds,
-       applied.to, modifies
-3. Avoid generic SLKs unless no precise match exists.
-4. The LNK graph must be acyclic.
-5. LNK may connect:
-       • VSC → VSC
-       • VSC → ENT-ID (subordinate ENB)
-       • VSC → CRB-ID (subordinate CRB)
-   allowing hierarchical composition of Circumtantial.
-
-------------------------------------------------------------------
-4.X.4. Canonical CRB Patterns
-------------------------------------------------------------------
-
-Time Circumtantial:
-CRB>
-  <CIR:
-    ID: a_morning
-    surface: "in the morning"
-    CLS: time
-  RIC>
-  <VSC
-    v1: time_point
-    v2: e_morning
-  CSV>
-  <LNK
-    v1 occurs.at v2
-  KNL>
-BRC>
-
-Manner Circumtantial:
-CRB>
-  <CIR:
-    ID: a_quick
-    surface: "very quickly"
-    CLS: manner
-  RIC>
-  <VSC
-    v1: manner_profile
-    v2: degree_modifier
-  CSV>
-  <LNK
-    v1 scaled.by v2
-  KNL>
-BRC>
-
-Causal Circumtantial:
-CRB>
-  <CIR:
-    ID: a_cause_storm
-    surface: "because of the storm"
-    CLS: cause
-  RIC>
-  <VSC
-    v1: causal_anchor
-    v2: e_storm
-  CSV>
-  <LNK
-    v1 caused.by v2
-  KNL>
-BRC>
-
-Conditional Circumtantial:
-CRB>
-  <CIR:
-    ID: a_if_necessary
-    surface: "if necessary"
-    CLS: condition
-  RIC>
-  <VSC
-    v1: conditional_frame
-    v2: condition_state
-  CSV>
-  <LNK
-    v1 requires v2
-  KNL>
-BRC>
-
-Purpose Circumtantial:
-CRB>
-  <CIR:
-    ID: a_purpose_avoid
-    surface: "to avoid delays"
-    CLS: purpose
-  RIC>
-  <VSC
-    v1: purpose_goal
-    v2: e_delays
-  CSV>
-  <LNK
-    v1 aims.at v2
-  KNL>
-BRC>
-
-Concessive Circumtantial:
-CRB>
-  <CIR:
-    ID: a_despite_rain
-    surface: "despite heavy rain"
-    CLS: concession
-  RIC>
-  <VSC
-    v1: concessive_frame
-    v2: e_rain
-  CSV>
-  <LNK
-    v1 opposed.by v2
-  KNL>
-BRC>
+This block is fully analogous to the one in ENB.
 
 ==============================================================
 §5. CPL — Copular Predication (Classification & Attributes)
@@ -522,7 +320,7 @@ PLC>
 PLC>
 
 --------------------------------------------------------------
-5.8. When CPL Is Used
+5.8. When CPL Must Be Used (Mandatory Conditions)
 --------------------------------------------------------------
 
 Use CPL instead of EVT when:
@@ -560,7 +358,7 @@ EVT ::=
       SBJ-BLOCK
       ACT-BLOCK
       [OBJ-BLOCK …]      // zero or more complements
-      [ADV-BLOCK …]      // zero or more Circumtantials
+      [CRA-BLOCK …]      // zero or more Circumtantial Applications
   TVE>
 
 All components share a unified structure and must obey the following
@@ -580,21 +378,21 @@ SBJ introduces the **subject node** of the event.
 No prepositions or SLKs appear here; all relations involving SBJ occur inside OBJ blocks.
 
 ------------------------------------------------------------
-4.x.3 ADV Block
+4.x.3 CRA Block - Circumtantial Application
 ------------------------------------------------------------
 
-ADV-BLOCK ::= 
-    <ADV: a_nodeid CLS: semantic_class>
+CRA-BLOCK ::= 
+    <CRA: a_nodeid CLS: semantic_class>
 
 nodeid ::= a_* | d_*
-  // a_* : Circumtantial nodeid declared in CIR block
-  // d_* : discourse Circumtantial constant (no CIR block)
+  // a_* : Circumtantial nodeid declared in CRB block
+  // d_* : discourse Circumtantial constant (no CRB block)
 
-ADV introduces the **Circumtantial node** pertaining to the event or copula.
+CRA introduces the **Circumtantial node** pertaining to the event or copula.
 
 Discourse Circumtantials are special nodes filled with unary discourse
 operators that are constants (like entity singletons) and do not require
-a CIR block. Their CLS values are listed below.
+a CRB block. Their CLS values are listed below.
 
 CLS: discourse.evid    // Evidential: truth-status qualifiers
 ------------------------------------------------------------
@@ -628,11 +426,11 @@ accordingly
 consequently
 thus        // unary use only, not Circumtantial CNJ
 
-Examples of discourse ADV blocks:
+Examples of discourse CRA blocks:
 
-<ADV: d_presumably_1 CLS: discourse.evid>
+<CRA: d_presumably_1 CLS: discourse.evid>
 
-<ADV: d_certainly_1 CLS: discourse.attitude>
+<CRA: d_certainly_1 CLS: discourse.attitude>
 
 ------------------------------------------------------------
 4.x.3 ACT Block 
@@ -644,12 +442,14 @@ Tense:Aspect:Voice:Mood:Modality:Polarity lemma
 
 Where
 
-TNS::= PST | PRS | FTR            // past, present, future
-ASP::= IDF | CNT | PFT | PCT      // indefinite, habitual, continuous, perfect, perfect continuous
-VCE::= ACV | PSV                  // active, passive
-MOO::= IND | IRG | IMP | SJT      // indicative, interrogative, imperative, subjunctive
+TNS::= PST | PRS | FTR                  // past, present, future
+ASP::= IDF | HAB | CNT | PFT | PCT      // indefinite, habitual, continuous, perfect, perfect continuous
+VCE::= ACV | PSV                        // active, passive
+MOO::= IND | IRG | IMP | SJT            // indicative, interrogative, imperative, subjunctive
 MDL::= NIL | CAN | CLD | MAY | MHT | MST | SHD | WLL | WLD | OGT | HVT // can, could, may, might, should, will, would, ought to, have to
-PLR::= POS |NEG                   // positive, negative
+PLR::= POS |NEG                         // positive, negative
+
+use IDF for a single event and HAB for periodic events that occurs habitually.
 
 ACT-BLOCK ::=
     <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma>
@@ -771,6 +571,7 @@ Multiple OBJ-BLOCKs may appear in any EVT when the verb licenses multiple argume
 MANDATORY RULE:
 If a single subject performs one action (ACT) simultaneously affecting multiple objects, all objects must be represented 
 as separate <OBJ> blocks within a single <EVT> block, not as separate events.
+Do not create multiple EVT blocks for what is a single event with multiple objects.
 
 Example:
 
@@ -1079,7 +880,7 @@ Rules:
 
   1. EVT may appear as FROM.
   2. EVT may appear as TO (anchor).
-  3. No other FREGE block type (CPL, SET, ENB, ENT, VSC) is a DAG node.
+  3. No other FREGE block type (CPL, SET, ENB, ENT, MAT) is a DAG node.
 
 --------------------------------------------------------------
 6.3. Directionality — Universal Anchor Rule
@@ -1179,7 +980,7 @@ These connectors represent *pure surface discourse relations*. They NEVER imply 
 
 AND, OR, and NOT in CNJ block and AND, OR, NOT in LGK block are fundamentally different things.
 
-| CNJ                            | ROLE          | FROM→TO                        | Anchor (TO) is… |
+| CNJ                            | ROLE          | FROM→TO                         | Anchor (TO) is…  |
 |--------------------------------|---------------|---------------------------------|------------------|
 | and                            | conjunctive   | second_event → first_event      | first event      |
 | or                             | alternative   | alternative_event → anchor      | anchor event     |
@@ -1269,7 +1070,7 @@ If it describes habitual repeated event patterns, use LGK.
 6.6.10 Structural / Discourse
 ----------------------------
 
-| CNJ                        | ROLE      | FROM→TO                     | Anchor (TO) is… |
+| CNJ                        | ROLE      | FROM→TO                     | Anchor (TO) is…  |
 |----------------------------|-----------|-----------------------------|------------------|
 | first, next, then, finally | sequence  | later → earlier/previous    | previous step    |
 | anyway, in_any_case        | discourse | update → previous           | previous event   |
@@ -1353,7 +1154,7 @@ Formal syntax:
   <EVT:id=E_1
     [<SBJ: f_param>]
     [<OBJ: f_param>]
-    [<ADV: f_param>]
+    [<CRA: f_param>]
     ...
   TVE>
 FTQ>
@@ -1368,14 +1169,14 @@ FTQ>
   <EVT:id=E_1
     [<SBJ: f_param>]
     [<OBJ: f_param>]
-    [<ADV: f_param>]
+    [<CRA: f_param>]
     ...
   TVE>
 
   <EVT:id=E_2
     [<SBJ: f_param>]
     [<OBJ: f_param>]
-    [<ADV: f_param>]
+    [<CRA: f_param>]
     ...
   TVE>
 
@@ -1383,7 +1184,7 @@ FTQ>
   <EVT:id=E_N
     [<SBJ: f_param>]
     [<OBJ: f_param>]
-    [<ADV: f_param>]
+    [<CRA: f_param>]
     ...
   TVE>
 
@@ -1407,7 +1208,7 @@ FTQ>
   <EVT:id=E_1
     [<SBJ: f_param>]
     [<OBJ: f_param>]
-    [<ADV: f_param>]
+    [<CRA: f_param>]
     ...
   TVE>
 FTQ>
@@ -1446,17 +1247,18 @@ Surface:
 All field agents who submitted reports late will receive a notice.
 
 FSP:
-<ENT:
+
+<ENB
   ID: e_notice
   surface: "a notice"
   NS: dom.intelligence.communication
-TNE>
+BNE>
 
-<ENT:
+<ENB
   ID: e_report
   surface: "reports"
   NS: dom.intelligence.documentation
-TNE>
+BNE>
 
 <QTF 
   Q=ALL 
@@ -1472,7 +1274,7 @@ TNE>
          PRP=NIL
          SLK=has.object
     JBO>
-    <ADV: t_late CLS: manner>
+    <CRA: t_late CLS: manner>
   TVE>
 FTQ>
 
@@ -1491,35 +1293,35 @@ Surface:
 A special order has been established to award all veteran dogs who lost their tails in the battle or had their ear bit off in a skirmish.
 
 FSP:
-<ENT:
+<ENB
   ID: e_order
   surface: "a special order"
   NS: dom.military.administration
-TNE>
+BNE>
 
-<ENT:
+<ENB
   ID: e_tail
   surface: "tails"
   NS: dom.anatomy.bodypart
-TNE>
+BNE>
 
-<ENT:
+<ENB
   ID: e_ear
   surface: "ear"
   NS: dom.anatomy.bodypart
-TNE>
+BNE>
 
-<ENT:
+<ENB
   ID: e_battle
   surface: "the battle"
   NS: dom.military.event
-TNE>
+BNE>
 
-<ENT:
+<ENB
   ID: e_skirmish
   surface: "a skirmish"
   NS: dom.military.event
-TNE>
+BNE>
 
 <QTF 
   Q=ALL 
@@ -1535,7 +1337,7 @@ TNE>
          PRP=NIL
          SLK=loses
     JBO>
-    <ADV: t_battle CLS: time>
+    <CRA: t_battle CLS: time>
   TVE>
 
   <EVT:id=E2
@@ -1545,7 +1347,7 @@ TNE>
          PRP=NIL
          SLK=affected
     JBO>
-    <ADV: t_skirmish CLS: time>
+    <CRA: t_skirmish CLS: time>
   TVE>
 
   <LGK OR_1 E1 E2 KGL>
@@ -1566,13 +1368,13 @@ Surface:
 Every operative who participated in the desert op had been trained by an assigned expert who had combat experience in the desert.
 
 FSP:
-<ENT:
+<ENB
   ID: e_desert_op
   surface: "the desert op"
   NS: dom.intelligence.operation
 ENT>
 
-<ENT:
+<ENB
   ID: e_experience
   surface: "combat experience in the desert"
   NS: dom.military.experience
@@ -1620,19 +1422,19 @@ QTF>
 EVT>
 
 <ENB
-  <ENT:
+<ENB
     ID: e_experience
     surface: "combat experience in the desert"
     NS: dom.military.experience
   ENT>
-  <VSC
-    v1: experience
-    v2: combat
-    v3: desert
-  CSV>
+  <MAT
+    m1: experience: type og person's disposition 
+    m2: combat: fighting process
+    m3: desert: specific geographic environment
+  TAM>
   <LNK
-    v1 is.a_kind v2
-    v1 located.in v3
+    m1 pertains_to m2
+    m2 located.in m3
   KNL>
 BNE>
 
@@ -1642,11 +1444,11 @@ Surface:
 All employees who don't have a manager report directly to the vice-president.
 
 FSP:
-<ENT:
+<ENB
   ID: e_vp
   surface: "the vice-president"
   NS: dom.corporate.position
-TNE>
+BNE>
 
 <QTF
   T=EXIST
@@ -1678,18 +1480,16 @@ QTF>
   EVT>
 QTF>
 
+CRB>
+  ID:a_directly
+  surface:"directly"
+  CLS:manner
 BRC>
-  <CIR:
-    ID:a_directly
-    surface:"directly"
-    CLS:manner
-  RIC>
-BDA>
 
 <EVT:id=E2
   <SBJ:s_employees>
   <ACT:PRS:IDF:ACV:IND:NIL:POS report>
-  <ADV:a_directly CLS:manner>
+  <CRA:a_directly CLS:manner>
   <OBJ:e_vp
        PRP=to
        SLK=reports_to
@@ -1828,7 +1628,10 @@ Characteristics:
     ✓ ideal for storage, indexing, and search
 
 Example:
-[WGNR|00CF]<ENT: ID: e_sample surface: "This sample" NS: dom.intelligence.datasetTNE><ENT: ID: e_individuals surface: "all individuals who submitted details to the fake military contractor" NS: dom.human.populationTNE><ENT: ID: e_contractor surface: "the fake military contractor" NS: dom.military.organizationTNE><ENT: ID: e_mercenaries surface: "every mercenary arrested in Minsk by Belarusian security" NS: dom.military.personnelTNE><ENT: ID: e_Minsk surface: "Minsk" NS: dom.geography.cityTNE><ENT: ID: e_Belarus_security surface: "Belarusian security" NS: dom.national.securityTNE><ENB <ENT: ID: e_portion surface: "roughly 40 percent of all individuals who submitted details to the fake military contractor" NS: dom.statistics.coverage TNE> <VSC v1: coverage_rate v2: 40_percent v3: e_individuals v4: E1 CSV> <LNK v1 has.value v2 v1 applied.to v3 v3 defined.by v4 KNL>BNE><EVT:id=E1 <SBJ: e_individuals> <ACT:PST:IDF:ACV:IND:NIL:POS submit> <OBJ: e_contractor PRP=to SLK=recipient JBO> <OBJ: NIL PRP=NIL SLK=submits JBO>TVE><EVT:id=E2 <SBJ: e_sample> <ACT:PST:IDF:ACV:IND:NIL:POS cover> <OBJ: e_portion PRP=NIL SLK=covers JBO>TVE><EVT:id=E3 <SBJ: e_Belarus_security> <ACT:PST:IDF:ACV:IND:NIL:POS arrest> <OBJ: e_mercenaries PRP=NIL SLK=affects JBO> <OBJ: e_Minsk PRP=in SLK=location JBO>TVE><EVT:id=E4 <SBJ: e_sample> <ACT:PST:IDF:ACV:IND:NIL:POS encompass> <OBJ: e_mercenaries PRP=NIL SLK=includes JBO>TVE><CNJ E2 E1 "who" explanatory JNC><CNJ E4 E3 "arrested in" explanatory JNC>
+[WGNR|00CF]<ENB: ID: e_sample surface: "This sample" NS: dom.intelligence.datasetBNE><ENB: ID: e_individuals surface: "all individuals who submitted details to the fake military contractor" NS: dom.human.populationBNE><ENB: ID: e_contractor surface: "the fake military contractor" NS: dom.military.organizationBNE><ENB: ID: e_mercenaries surface: "every mercenary arrested in Minsk by Belarusian security" NS: dom.military.personnelBNE><ENB: ID: e_Minsk surface: "Minsk" NS: dom.geography.cityBNE><ENB: ID: e_Belarus_security surface: "Belarusian security" NS: dom.national.securityBNE><ENB <ENB: ID: e_portion surface: "roughly 40 percent of all individuals who submitted details to the fake military contractor" NS: dom.statistics.coverage BNE> CSV>BNE> <EVT:id=E1 <SBJ: e_individuals> <ACT:PST:IDF:ACV:IND:NIL:POS submit> <OBJ: e_contractor PRP=to SLK=recipient JBO> <OBJ: NIL PRP=NIL SLK=submits JBO>TVE><EVT:id=E2 <SBJ: e_sample> <ACT:PST:IDF:ACV:IND:NIL:POS cover> <OBJ: e_portion PRP=NIL SLK=covers JBO>TVE><EVT:id=E3 <SBJ: e_Belarus_security> <ACT:PST:IDF:ACV:IND:NIL:POS arrest> <OBJ: e_mercenaries PRP=NIL SLK=affects JBO> <OBJ: e_Minsk PRP=in SLK=location JBO>TVE><EVT:id=E4 <SBJ: e_sample> <ACT:PST:IDF:ACV:IND:NIL:POS encompass> <OBJ: e_mercenaries PRP=NIL SLK=includes JBO>TVE><CNJ E2 E1 "who" explanatory JNC><CNJ E4 E3 "arrested in" explanatory JNC>
+
+MANDATORY:
+Empty lines between FSP lines are strictly forbidden!
 
 This is semantically and structurally equivalent to the Verbose version.
 
