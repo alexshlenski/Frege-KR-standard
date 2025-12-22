@@ -1,38 +1,3 @@
-=======================================================================
-🔸 FREGE MAIN PRINCIPLE: ATTENTION-DRIVEN SEMANTIC DOMINANCE
-=======================================================================
-
-All semantic links in this matrix obey a single global invariant called
-the “Attention-Driven Semantic Dominance”.
-
-Definition:
-Every directed semantic link X → Y MUST be oriented from the
-semantically dominant term (the figure, focus, controller, governor,
-or grounding reference) toward the semantically dependent term
-(the ground, affected, constrained, referenced, or contextual frame).
-
-Dominance is NOT uniform; it is determined locally by the relation family:
-
-• Causality            → ontological dominance (cause → effect)
-• Agency / Function    → functional dominance (agent → target)
-• Mereology            → structural dominance (whole → part)
-• Abstraction          → ontological grounding (type → instance)
-• Spatial relations    → attentional dominance (figure → ground)
-• Temporal relations   → attentional dominance (focused event → reference event)
-• Discourse (CNJ)      → rhetorical dominance (anchor → satellite)
-
-Important:
-– Size, power, enclosure, or physical magnitude do NOT determine direction.
-– Attention / focus ALWAYS overrides ontological intuition where applicable.
-– Passive, inverse, or “_by” relations are forbidden.
-– Relation names NEVER encode inversion; direction alone carries asymmetry.
-– Allen relations are NOT exceptions: their selection and orientation
-  are governed by attentional focus, not by time itself.
-
-This invariant is global and mandatory.
-Violations correspond to irony, absurdity, metaphor, or error and MUST
-NOT appear in canonical representations.
-
 ======================================================================
 🔸 FREGE IDENTIFIERS
 ======================================================================
@@ -2359,3 +2324,4 @@ unambiguous start/end tags.
 
 This design maintains reversibility, syntactic safety, and maximal
 efficiency without sacrificing the expressiveness of the FREGE-2.1 graph.
+
