@@ -41,7 +41,7 @@ Tip: Open the extra large diagrams in a separate tab and zoom in.
 By providing a structured, reversible, and fully explicit representation of who did what, when, why, and under what conditions, FREGE-2.1 enables explainable machine reasoning, narrative reconstruction, and audit-grade intelligence products.
 
 This document outlines Frege-DSR operational role in intelligence workflows, including OSINT fusion, deception detection, ISR pipelines, and structured threat analysis.  
-The **formal specification** is published separately in the [open-source standard](https://https://github.com/alexshlenski/Frege-KR-standard/blob/main/open-source/FREGE-open-source.txt)
+The **formal specification** is published separately in the [open-source standard](https://github.com/alexshlenski/Frege-KR-standard/blob/main/open-source/FREGE-open-source.txt)
 
 ---
 
