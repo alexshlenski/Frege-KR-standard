@@ -96,6 +96,11 @@ Generic          a_g_<sbt>_*           implicit
 Unique           a_u_<sbt>_*           implicit
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Fabular Adjunct | Identifier format | Declaration block | 
+======================================================================
+Generic          F_*                   FAB
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 Discourse   | Identifier format | Declaration block | 
 ======================================================================
 Generic          d_*                   implicit
@@ -188,7 +193,7 @@ knowledge.
 
 <ENB 
   ENT-ID: e_s_<sbt>_* | NOM-ID: n_s_<sbt>_*
-  SURFACE: <surface syntagm>
+  SRF: <surface syntagm>
   NS: axis1.axis2
   MSE:
       u_1: MSE_Unit_1 : semantic_role
@@ -343,13 +348,13 @@ Example:
 
 <ENB:
   ID: e_rain
-  surface: "rain"
+  SRF: "rain"
   NS: dom.weather.phenomenon
 BNE>
 
 <ENB:
   ID: e_railroad_crossing
-  surface: "railroad crossing"
+  SRF: "railroad crossing"
   NS: dom.transport.infrastructure
 BNE>
 
@@ -376,7 +381,7 @@ Formal syntax:
 <QCL 
   QCL-ID: q_*
   ELM: e_* | n_*
-  QTF-SRF: <quantifier surface syntagm>
+  SRF: <quantifier surface syntagm>
   MSE:
       u_1: MSE_Unit_1 : semantic_role
       u_2: MSE_Unit_2 : semantic_role
@@ -426,7 +431,7 @@ Formal syntax
 
 <ALC
   ALC-ID: Al_*
-  SURFACE: <surface syntagm>  
+  SRF: <surface syntagm>  
   APH: for | per | out_of | among | within | across | throughout | ... // allocation phrase
   CLN: q_*   // collection of entities or nominalizations
 CLA>
@@ -519,11 +524,11 @@ Formal Syntax:
 
 <CRB
   CIR-ID: c_node_id
-  surface: "<original Circumstantial span>"
+  SRF: "<original Circumstantial span>"
   CLS: time|place|manner|cause|condition|purpose|result|
        degree|concession|comparison|accompaniment|instrument
   DSC: discourse_modifier // optional: apparently, presumably, evidently, approximately, ...
-  MSE-BLOCK // structurally and semantically the same as in ENB
+  MSE/LNK block // structurally and semantically the same as in ENB
 BRC>
 
 where 
@@ -546,6 +551,80 @@ even if they pragmatically imply confidence.
 Test:
 – If the lexeme answers “how certain is the speaker?”, use DSC.
 – If the lexeme answers “how precise / how much / to what extent?”, do NOT use DSC.
+
+======================================================================
+🔸 FAB block — Fabular Adjunct
+======================================================================
+MANDATORY: Nesting of FAB blocks is strictly prohibited!
+
+Declaration Rules:
+
+• FAB encodes only fabular adjunct semantics exported by the surface
+  and nothing else. FAB MUST NOT encode circumstantial information
+  and MUST NOT be used to describe time, place, manner, or any other
+  event-serving parameter.
+
+• FAB represents a fabular operator that attaches reference to 
+  substantivated occurrences to the fabula using different semantic
+  links such as condition, commitment, deterrent, authorization, 
+  projection, exchange, reciprocity, threat, coercion, temptation
+  and any other possible fabular glue.
+
+• FAB does not describe what happened. FAB encodes what is attached,
+  required, promised, conditioned, constrained, or projected with
+  respect to the fabular flow.
+
+• FAB MUST NOT substitute an event, entity, relation, or copular
+  statement.
+
+• Aggregation of multiple fabular adjuncts into a single FAB is
+  strictly forbidden. Each fabular adjunct expressed on the surface
+  MUST be declared as a separate FAB block.
+  
+  EXCEPTION:
+  A single FAB block MAY encode a coordinated sequence of homogeneous
+  nominalized actions or processes when they are expressed on the
+  surface as a single conjunctive or enumerative group sharing
+  the same fabular attachment and scope.
+  
+
+• FAB MUST fully decompose and explain the internal structure of the
+  fabular adjunct span in the MSE/LNK segments (microsemantics).
+  Cutting corners on microsemantics is strictly forbidden and leads
+  to invalidation of the DFS.
+
+Formal Syntax:
+
+<FAB
+  FAB-ID: F_node_id
+  SRF: "<original Fabular Adjunct span>"
+  FCL: conditional | commitment | deterrent | authorization | projection | exchange | reciprocity | other
+  DSC: discourse_modifier // optional
+  MSE/LNK block // structurally and semantically the same as in ENB
+BFA>
+
+where
+• `SRF` preserves the exact surface span of the Fabular Adjunct.
+• `FAB-ID` is the canonical logical identifier for this Fabular Adjunct.
+• `FCL` specifies the operational fabular class of the adjunct.
+• `DSC` encodes explicit epistemic or evidential stance toward the
+  fabular adjunct itself.
+
+------------------------------------------------------------------
+For this block and all other blocks using the DSC option, apply the
+following "DSC vs Degree" rule:
+
+Use DSC only for lexemes that explicitly encode the speaker’s epistemic,
+evidential, or formal stance toward the fabular adjunct.
+
+Lexemes that specify magnitude, scope, duration, progression, or
+extent MUST be encoded in MSE, not in DSC.
+
+Test:
+– If the lexeme answers “how certain / how formal / how explicit is this
+  fabular attachment?”, use DSC.
+– If the lexeme answers “how much / how far / how long / to what extent?”,
+  do NOT use DSC.
 
 ========================================
 🔸 ATB block — Attribute Qualification Block
@@ -575,7 +654,7 @@ MANDATORY: Nesting of ATB blocks is strictly prohibited!
 
 <ATB
   ATR-ID: a_*
-  surface: "original attribute span"
+  SRF: "original attribute span"
   ATR: attribute_lemma
   AXS: semantic.axis.path
   DSC: discourse_modifier // optional: apparently, presumably, evidently, approximately, ...
@@ -661,7 +740,7 @@ Reference Examples (Canonical)
 ATB declaration:
 <ATB
   ID: a_mentally_resilient
-  surface: "mentally resilient"
+  SRF: "mentally resilient"
   ATR: resilient
   AXS: psychological.resilience
   MSE
@@ -671,7 +750,7 @@ BTA>
 1) Reference from ENB :
 <ENB
   ID: e_operator
-  surface: "the mentally resilient operator"
+  SRF: "the mentally resilient operator"
   NS: dom.human.professional
   MSE
   ...
@@ -879,7 +958,7 @@ Formal Syntax
 
 <HDL  
   HDL-ID: H_*  
-  surface: "<infinitival span>"  
+  SRF: "<infinitival span>"  
   CLS: purpose | reason | condition | result | enablement  
        | expectation | content | directive | evaluation  
 LHD>
@@ -1415,15 +1494,26 @@ logic.
 🔸 CNJ block — The topological structure of events in Łukasiewicz Notation
 ======================================================================
 
-The CNJ block reflects the exact event topology from the surface using the
-original conjunctions, complementizers and other lexical units that the
-surface uses to create an algebraic structure of links between events, 
-copulas and relations.
+Declaration Rules:
 
-CNJ can accommodate the following blocks: CPL,EVT, REL
+• Each DFS must have exactly one CNJ block.
 
-There must nbe exactly one CNJ block per DFS.
+• The CNJ block reflects event topology exported by the surface
+  using fabular nodes and CNJ connectors.
+  
+• The following fabular nodes are licensed in CNJ:
+  • Event — EVT / EVQ / EVS / EVP
+  • Copula — CPL
+  • Relation — REL
+  • Fabular Adjunct — FAB
+  • Subordinate Controller - CTL
 
+• CNJ connectors are non-explanatory event flow operators that include,
+  but are not limited to, formalized conjunctions and complementizers.
+
+• CNJ connectors do not encode semantic interpretation and serve exclusively
+  to continue or branch the fabular flow.
+  
 Formal Syntax:
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
@@ -1431,13 +1521,11 @@ CNJ-BLOCK ::= Ev_Event_K | <connector> Ev_Event_N  [ Ev_Event_M ... ] [ <connect
            
 where 
 <connector>::= 
-  $<original_surface_connector_as_snake> |
-  $<complementizer> |
-  CTL-ID
+  $<original_surface_connector_as_snake> | $<complementizer> | $adjucnt 
   
- complementizer::= that | whether | if | ...
+ complementizer::= $that | $whether | $if | ...
 
-Connectors in CNJ are not logical, they are ppropositional.
+Connectors in CNJ are not logical, they are propositional.
 
 MANDATORY RULES:
 All connectors in CNJ must abide by Łukasiewicz Notation in terms in topological sense.
@@ -1448,64 +1536,131 @@ A comma connector `,` that connects clauses in surface must be replaced with $an
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 Example that exports complementizer:
-- Ann hoped THAT Andy won't leave her.
+
+Ann hoped $that Andy won't leave her and they will save their marriage.
   
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-CTL-ID declaration and usage
+======================================================================
+🔸 CTL block — Controller of Ontological Space for Subordinate Events
+======================================================================
 
-CTL-block:==
-  <CTL
-    CTL-ID: ctl_<snake_connected_surface>
-    surface: e_* ID from SBJ from the subject of controlong caluse that introduces and controls the subordinate clause
-  LTC>
+Declaration Rules:
+----------------------------
 
-The subject of the controlling clause subordinates the the subordinate clause by creating
-the ontological space where subordinate clauses's event occurs. 
+The CTL block declares a fabular control node that binds a controlling
+ontological space to a subordinate event.
 
-The syntax is: <ontological space> + <complementizer>
+A CTL block is comprised of:
 
-The types of ontological space are included but not limited to those examples:
+• an ID reference to the entity or nominalization that introduces and
+  controls the ontological space;
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ time object:
+• an ID reference to the subordinate event that is licensed to occur
+  within that ontological space.
 
-Example:   
-There were *ontological_space:[times] *complementizer:[when] the price of a gallon of milk was only 99 cent.
-There will come *ontological_space:[the blessed time] *complementizer:[when] everyone will be free.
+----------------------------------------------------------------------  
+CTL Block Syntax  
+----------------------------------------------------------------------
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ spatial object:
+<CTL
+  CTL-ID: Ct_<control_block_id>
+  CTL: e_* | n_*        // controlling entity or nominalization
+  EVT: Ev_*             // subordinate event ID
+LTC>
 
-Example:   
-We don't have *ontological_space:[enough room] in this parking lot *complementizer:[to] park our van.
-The island was a long strip of *ontological_space:[barren land] *complementizer:[where] nobody lived except for the lighthouse keeper.
+----------------------------------------------------------------------  
+Usage in CNJ  
+----------------------------------------------------------------------
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ enabler object:
+A CTL block is licensed directly in the CNJ block as a fabular node.
 
-Tim has bought *ontological_space:[a lathe] *complementizer:[with which] he could extend his woodwork business.
+<CNJ
+  $<complementizer>
+  Ev_<controlling_event>
+  Ct_<control_block_id>
+JNC>
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ communication object:
+----------------------------------------------------------------------  
+Conceptual Definition  
+----------------------------------------------------------------------
 
-Example:   
-Donna could not forgive her brother for *ontological_space:[his words] *complementizer:[that] her son Danny will never become a real man and get a job.   
+The subject or object of a controlling clause subordinates a subordinate
+clause by creating an ontological space in which the subordinate event
+is licensed to occur.
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ mental object:
+This ontological space is expressed on the surface as:
 
-Example:   
-Emma had a *ontological_space:[weird dream] *complementizer:[that] she became a squirrel and climbed to the top of an oak tree.
+<ontological space> + <complementizer>
+
+The CTL block joins the controlling phrase and the subordinate event
+into a single fabular control structure that participates in CNJ
+topology.
+
+CTL does not describe an event and does not modify an event.
+CTL introduces a dominance relation between a controlling space
+and a subordinate event.
+
+----------------------------------------------------------------------  
+Types of Ontological Space (Non-Exhaustive)  
+----------------------------------------------------------------------
+
+✦ Time Object
+
+An abstract temporal container that licenses an event.
+
+Examples:
+There were CTL-phrase:[times] complementizer:[when]
+the price of a gallon of milk was only 99 cents.
+
+There will come CTL-phrase:[the blessed time] complementizer:[when]
+everyone will be free.
+
+----------------------------------------------------------------------  
+✦ Spatial Object
+
+A physical or abstract location that enables or restricts an event.
+
+Examples:
+We don't have CTL-phrase:[enough room] in this parking lot
+complementizer:[to] park our van.
+
+The island was a long strip of CTL-phrase:[barren land]
+complementizer:[where] nobody lived except for the lighthouse keeper.
+
+----------------------------------------------------------------------  
+✦ Enabler Object
+
+A concrete object whose existence enables an event.
+
+Example:
+Tim has bought CTL-phrase:[a lathe]
+complementizer:[with which] he could extend his woodwork business.
+
+----------------------------------------------------------------------  
+✦ Communication Object
+
+A communicative act or artifact that frames a subordinate proposition.
+
+Example:
+Donna could not forgive her brother for CTL-phrase:[his words]
+complementizer:[that] her son Danny would never become a real man
+and get a job.
+
+----------------------------------------------------------------------  
+✦ Mental Object
+
+A cognitive or experiential space hosting a subordinate event.
+
+Example:
+Emma had CTL-phrase:[a weird dream]
+complementizer:[that] she became a squirrel and climbed
+to the top of an oak tree.
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ✦ information object: 
 
 Example:   
-Richard received *ontological_space:[an email from his bank] *complementizer:[that] he was preselected for a home equity loan.
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
-CNJ can accommodate the following blocks: CPL,EVT, REL
+Richard received CTL-phrase:[an email from his bank] *complementizer:[that] 
+he was preselected for a home equity loan.
 
 ======================================================================
 🔸 CNJ SURFACE OPERATORS  (surface-bound; no abstract connectors) 
@@ -1990,7 +2145,7 @@ Characteristics:
     ✓ ideal for storage, indexing, and search
 
 Example:
-[WGNR|00CF]<ENB: ID: e_sample surface: "This sample" NS: dom.intelligence.datasetBNE><ENB: ID: e_individuals surface: "all individuals who submitted details to the fake military contractor" NS: dom.human.populationBNE><ENB: ID: e_contractor surface: "the fake military contractor" NS: dom.military.organizationBNE><ENB: ID: e_mercenaries surface: "every mercenary arrested in Minsk by Belarusian security" NS: dom.military.personnelBNE><ENB: ID: e_Minsk surface: "Minsk" NS: dom.geography.cityBNE><ENB: ID: e_Belarus_security surface: "Belarusian security" NS: dom.national.securityBNE><ENB <ENB: ID: e_portion surface: "roughly 40 percent of all individuals who submitted details to the fake military contractor" NS: dom.statistics.coverage BNE> CSV>BNE> <EVT:id=E1 <SBJ: e_individuals> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS submit> <OBJ: e_contractor PRP=to SLK=recipient JBO> <OBJ: NIL PRP=NIL SLK=submits JBO>TVE><EVT:id=E2 <SBJ: e_sample> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS cover> <OBJ: e_portion PRP=NIL SLK=covers JBO>TVE><EVT:id=E3 <SBJ: e_Belarus_security> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS arrest> <OBJ: e_mercenaries PRP=NIL SLK=affects JBO> <OBJ: e_Minsk PRP=in SLK=location JBO>TVE><EVT:id=E4 <SBJ: e_sample> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS encompass> <OBJ: e_mercenaries PRP=NIL SLK=includes JBO>TVE><CNJ E2 E1 "who" explanatory JNC><CNJ E4 E3 "arrested in" explanatory JNC>
+[WGNR|00CF]<ENB: ID: e_sample SRF: "This sample" NS: dom.intelligence.datasetBNE><ENB: ID: e_individuals SRF: "all individuals who submitted details to the fake military contractor" NS: dom.human.populationBNE><ENB: ID: e_contractor SRF: "the fake military contractor" NS: dom.military.organizationBNE><ENB: ID: e_mercenaries SRF: "every mercenary arrested in Minsk by Belarusian security" NS: dom.military.personnelBNE><ENB: ID: e_Minsk SRF: "Minsk" NS: dom.geography.cityBNE><ENB: ID: e_Belarus_security SRF: "Belarusian security" NS: dom.national.securityBNE><ENB <ENB: ID: e_portion SRF: "roughly 40 percent of all individuals who submitted details to the fake military contractor" NS: dom.statistics.coverage BNE> CSV>BNE> <EVT:id=E1 <SBJ: e_individuals> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS submit> <OBJ: e_contractor PRP=to SLK=recipient JBO> <OBJ: NIL PRP=NIL SLK=submits JBO>TVE><EVT:id=E2 <SBJ: e_sample> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS cover> <OBJ: e_portion PRP=NIL SLK=covers JBO>TVE><EVT:id=E3 <SBJ: e_Belarus_security> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS arrest> <OBJ: e_mercenaries PRP=NIL SLK=affects JBO> <OBJ: e_Minsk PRP=in SLK=location JBO>TVE><EVT:id=E4 <SBJ: e_sample> <ACT:PAST:INDF:ACTV:IDCT:NIL:POS encompass> <OBJ: e_mercenaries PRP=NIL SLK=includes JBO>TVE><CNJ E2 E1 "who" explanatory JNC><CNJ E4 E3 "arrested in" explanatory JNC>
 
 MANDATORY:
 Empty lines between FSP lines are strictly forbidden!
