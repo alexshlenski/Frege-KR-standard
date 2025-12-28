@@ -132,7 +132,636 @@ Always specific  r_*                 REL
 
 No subtypes
         
-------------------------------------------------------------------
+
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+FREGE SEMANTIC CLASSIFCATION
+Matrix A contains classification of notion used in FREGE NS fields
+(namespaces) and MSE blocks (microsemantic lexemes annotation).
+Matrix B contains classification of semantic links used in LNK blocks
+as microsemantic connectors. 
+======================================================================
+🔸 MATRIX A — SEMANTIC OBJECTS (NOTIONS)
+======================================================================
+
+These are intrinsic, modal, or evaluative descriptors of ONE bearer.
+
+----------------------------------------------------------------------
+A1 — Ontological Classification (type descriptors)
+----------------------------------------------------------------------
+ontological_kind
+temporal_persistence
+agency_class
+intentionality_class
+informational_nature
+systemicity
+collectivity
+materiality
+abstractness
+
+----------------------------------------------------------------------
+A2 — Control & Regime Context (intrinsic constraints)
+----------------------------------------------------------------------
+control_level
+authority_level
+legal_regime_dependence
+jurisdiction_scope
+mandate_scope
+
+----------------------------------------------------------------------
+A3 — Spatial & Existential Mode (non-relational)
+----------------------------------------------------------------------
+spatial_mode
+mobility_class
+distribution_mode
+virtuality
+
+----------------------------------------------------------------------
+A4 — Attributes & Measurables
+----------------------------------------------------------------------
+attribute
+value
+quantity
+unit
+dimension
+mass
+temperature
+pressure
+capacity
+duration
+
+----------------------------------------------------------------------
+A5 — States & Conditions (time-indexable but unary)
+----------------------------------------------------------------------
+state
+derived_state
+status_token
+operational_status
+readiness_level
+damage_level
+compliance_status
+sanction_status
+financial_health
+alert_level
+
+----------------------------------------------------------------------
+A6 — Modal & Epistemic Qualification
+----------------------------------------------------------------------
+modality            (observed | documented | inferred | alleged | etc.)
+polarity            (affirmative | negative | uncertain)
+confidence_value
+confidence_method
+credibility_score
+reliability_score
+
+----------------------------------------------------------------------
+A7 — Temporal Qualification (non-relational)
+----------------------------------------------------------------------
+tense               (past | present | future)
+interval
+recurrence
+frequency
+immediacy
+
+----------------------------------------------------------------------
+A8 — Evaluation (value judgments, not truth claims)
+----------------------------------------------------------------------
+positive
+negative
+important
+dangerous
+useful
+harmful
+legitimate
+illegitimate
+effective
+ineffective
+desirable
+undesirable
+
+----------------------------------------------------------------------
+A9 — Internal Intention & Motivation (agent-internal only)
+----------------------------------------------------------------------
+intention
+goal
+desire
+motivation
+preference
+rationale
+
+----------------------------------------------------------------------
+A10 — Information Structuring (aboutness, not discourse)
+----------------------------------------------------------------------
+aboutness
+topic
+theme
+frame
+background
+
+----------------------------------------------------------------------
+A11 — Social & Conflict Context (unary classification)
+----------------------------------------------------------------------
+social_scale
+conflict_context
+cooperation_context
+competition_context
+
+======================================================================
+🔸 MATRIX B — SEMANTIC CONNECTORS (LINKS)
+======================================================================
+
+These ONLY exist as relations between ≥2 objects.
+
+----------------------------------------------------------------------
+B1 — Identity & Reference
+----------------------------------------------------------------------
+identical_to
+same_as
+alias_of
+corefers_with
+refers_to
+denotes
+represents
+stands_for
+
+----------------------------------------------------------------------
+B2 — Typing & Taxonomy
+----------------------------------------------------------------------
+instance_of
+is_a
+subtype_of
+specialization_of
+generalization_of
+classified_as
+typed_as
+
+----------------------------------------------------------------------
+B3 — Mereology (part–whole)
+----------------------------------------------------------------------
+part_of
+has_part
+member_of
+composed_of
+contained_in
+contains
+layer_of
+segment_of
+subcomponent_of
+assembly_of
+configuration_of
+
+----------------------------------------------------------------------
+B4 — Participation (Entity ↔ Phenomenon roles)
+----------------------------------------------------------------------
+agent_of
+patient_of
+instrument_of
+beneficiary_of
+target_of
+recipient_of
+witness_of
+initiator_of
+executor_of
+authority_for
+
+----------------------------------------------------------------------
+B5 — Causality (world-level, temporal)
+----------------------------------------------------------------------
+causes
+triggers
+results_in
+leads_to
+prevents
+mitigates
+exacerbates
+contributes_to
+amplifies
+dampens
+side_effect_of
+
+----------------------------------------------------------------------
+B6 — Dependency & Constraint (logical, non-temporal)
+----------------------------------------------------------------------
+depends_on
+requires
+optional_for
+blocks
+overrides
+conditional_on
+precondition_for
+postcondition_of
+compatible_with
+incompatible_with
+
+----------------------------------------------------------------------
+B7 — Temporal Relations (ordering without causation)
+----------------------------------------------------------------------
+before
+after
+during
+overlaps
+starts
+ends
+coincides_with
+temporally_contains
+immediately_before
+immediately_after
+
+----------------------------------------------------------------------
+B8 — Spatial & Topological Relations
+----------------------------------------------------------------------
+at
+inside
+outside
+on
+near
+adjacent_to
+above
+below
+between
+disjoint_from
+touching
+overlapping
+contained_in_region
+equal_region
+partially_inside
+straddles_boundary
+surrounds
+aligned_with
+oriented_toward
+
+----------------------------------------------------------------------
+B9 — Motion & Path
+----------------------------------------------------------------------
+moves_from
+moves_to
+passes_through
+enters
+exits
+approaches
+recedes_from
+crosses
+circles_around
+follows_path
+deviates_from_path
+halts_at
+
+----------------------------------------------------------------------
+B10 — Control, Power & Governance
+----------------------------------------------------------------------
+controls
+commands
+regulates
+licenses
+authorizes
+sanctions
+delegates_to
+enforces
+supervises
+oversees
+accountable_to
+subject_to
+
+----------------------------------------------------------------------
+B11 — Possession, Custody & Access
+----------------------------------------------------------------------
+owns
+possesses
+held_by
+custodian_of
+assigned_to
+allocated_to
+entrusted_to
+borrowed_from
+leased_from
+has_access_to
+
+----------------------------------------------------------------------
+B12 — Information Flow & Transformation
+----------------------------------------------------------------------
+produces
+consumes
+publishes
+transmits
+stores
+transforms
+records
+documents
+summarizes
+quotes
+cites
+translates
+interprets
+
+----------------------------------------------------------------------
+B13 — Epistemic Support & Conflict (Evidence ↔ Claim)
+----------------------------------------------------------------------
+supports
+corroborates
+confirms
+contradicts
+refutes
+weakens
+undermines
+consistent_with
+inconsistent_with
+
+----------------------------------------------------------------------
+B14 — Normative & Legal Effects
+----------------------------------------------------------------------
+permits
+prohibits
+obliges
+entitles
+exempts
+violates
+complies_with
+derives_authority_from
+
+----------------------------------------------------------------------
+B15 — Counterfactual, Risk & Sensitivity
+----------------------------------------------------------------------
+risk_of
+likelihood_of
+chance_of
+would_cause
+would_prevent
+sensitive_to
+robust_against
+
+----------------------------------------------------------------------
+B16 — Social & Strategic Alignment
+----------------------------------------------------------------------
+supports_actor
+opposes_actor
+aligned_with
+coalition_with
+competes_with
+neutral_toward
+
+======================================================================
+GLOBAL INVARIANTS
+======================================================================
+• No connector may be stored as a property.
+• No object may require another object to be meaningful.
+• Evaluation ≠ Epistemic support.
+• Intention ≠ Causation.
+• Status ≠ Event.
+• Identity, mereology, causality are ALWAYS connectors.
+• Surface language never appears here.
+
+======================================================================
+🔸 MATRIX C — CNJ: SURFACE-NORMALIZED DISCOURSE FLOW CONNECTORS (DFS)
+======================================================================
+
+CNJ elements represent normalized surface discourse connectors.
+They preserve surface grouping and ordering while abstracting away
+purely morphological variation.
+
+CNJ operators MUST correspond to attested surface conjunctions,
+complementizers, discourse markers, or punctuation.
+They MUST NOT encode conceptual or logical relations.
+
+CNJ normalization is FORMAL (shape-level), not SEMANTIC.
+
+----------------------------------------------------------------------  
+C1 — ADDITIVE & COORDINATIVE FLOW  
+(preserves polarity, adds surface-linked content)  
+----------------------------------------------------------------------
+
+$and
+$or
+$nor
+$as_well_as
+$along_with
+$plus
+$together_with
+$both_and
+$either_or
+$neither_nor
+$not_only_but_also
+
+NOTE:
+No abstract operators such as `alternative` or `correlative_addition`
+are permitted at CNJ level.
+All operators directly reflect surface forms.
+
+----------------------------------------------------------------------  
+C2 — EMBEDDING & CONTENT LINKING  
+(surface complementizers only)  
+----------------------------------------------------------------------
+
+$that
+$whether
+$if
+$wh_*
+
+NOTE:
+CNJ does not distinguish declarative vs interrogative embedding.
+Such distinctions belong to MSE / HDL.
+
+----------------------------------------------------------------------  
+C3 — TEMPORAL FLOW & SEQUENCING  
+(surface temporal connectives)  
+----------------------------------------------------------------------
+
+$before
+$after
+$when
+$while
+$as
+$until
+$till
+$once
+$as_soon_as
+
+----------------------------------------------------------------------  
+C4 — CONDITIONAL & CONTINGENT FLOW  
+(surface conditionals only)  
+----------------------------------------------------------------------
+
+$if
+$unless
+$provided_that
+$assuming
+$even_if
+$in_case
+
+----------------------------------------------------------------------  
+C5 — CONCESSIVE & CONTRASTIVE FLOW  
+(surface contrast markers)  
+----------------------------------------------------------------------
+
+$although
+$though
+$even_though
+$whereas
+$while_contrast
+$despite_that
+$in_spite_of_that
+
+----------------------------------------------------------------------  
+C6 — EXPLANATORY & MOTIVATIONAL FLOW  
+(surface rhetorical markers only)  
+----------------------------------------------------------------------
+
+$because
+$since
+$as_reason
+$for_the_reason_that
+
+NOTE:
+CNJ encodes rhetorical explanation only.
+Causality is never encoded in CNJ.
+
+----------------------------------------------------------------------  
+C7 — PURPOSE & INTENDED OUTCOME FLOW  
+----------------------------------------------------------------------
+
+$so_that
+$in_order_that
+$lest
+
+----------------------------------------------------------------------  
+C8 — RESULT & CONSEQUENCE FLOW  
+----------------------------------------------------------------------
+
+$so
+$therefore
+$thus
+$hence
+$consequently
+$as_a_result
+$such_that
+
+----------------------------------------------------------------------  
+C9 — RELATIVE SCOPING & RESTRICTION  
+----------------------------------------------------------------------
+
+$who
+$which
+$that_rel
+$whose
+$where_rel
+$when_rel
+$of_which
+
+----------------------------------------------------------------------  
+C10 — COMPARATIVE & SCALAR FRAMING  
+----------------------------------------------------------------------
+
+$more_than
+$less_than
+$as_..._as
+$rather_than
+$instead_of
+
+----------------------------------------------------------------------  
+C11 — EXCEPTION, LIMITATION, FOCUS  
+----------------------------------------------------------------------
+
+$except
+$except_for
+$only
+$just
+$merely
+$at_least
+$at_most
+
+----------------------------------------------------------------------  
+C12 — DISCOURSE MANAGEMENT (SURFACE MARKERS)  
+----------------------------------------------------------------------
+
+$however
+$nevertheless
+$nonetheless
+$still
+$yet
+$on_the_other_hand
+$moreover
+$furthermore
+$also
+$besides
+$for_example
+$for_instance
+$in_other_words
+$in_sum
+$overall
+
+----------------------------------------------------------------------  
+C13 — EVIDENTIAL & STANCE MARKERS  
+(surface stance adverbs only)  
+----------------------------------------------------------------------
+
+$apparently
+$reportedly
+$allegedly
+$presumably
+$probably
+$maybe
+$perhaps
+$certainly
+$undoubtedly
+
+----------------------------------------------------------------------  
+C14 — FREE-CHOICE & UNIVERSAL CONCESSION  
+----------------------------------------------------------------------
+
+$no_matter_*
+$regardless_of_*
+$irrespective_of_*
+$whatever
+$whoever
+$wherever
+$whenever
+
+----------------------------------------------------------------------  
+C15 — COUNTERFACTUAL & IMAGINATIVE FRAMING  
+----------------------------------------------------------------------
+
+$as_if
+$as_though
+$if_only
+$would_that
+$suppose
+$imagine_that
+
+----------------------------------------------------------------------  
+C16 — QUOTATION & ATTRIBUTION FLOW  
+----------------------------------------------------------------------
+
+$according_to
+$as_claimed_by
+$as_reported_by
+$quote
+$unquote
+
+----------------------------------------------------------------------  
+C17 — PUNCTUATION AS FLOW CONTROL (OPTIONAL)  
+----------------------------------------------------------------------
+
+$comma
+$semicolon
+$dash
+$colon
+$paren_*
+
+======================================================================
+GLOBAL CNJ INVARIANTS
+======================================================================
+
+• CNJ operators MUST be traceable to surface tokens.
+• CNJ normalization MAY collapse inflectional or orthographic variants
+  but MUST NOT introduce abstract conceptual operators.
+• CNJ never creates entities.
+• CNJ never creates relations.
+• CNJ only preserves surface grouping, ordering, and framing.
+• CNJ is not logic, not ontology, and not world structure.
+• Removing all CNJ leaves a set of unordered semantic frames.
+• CNJ = surface-driven fabula flow.
+• LINKS = world structure and microsemantic relations.
+
+======================================================================
 🔸 FREGE MAIN ARCHITECTURAL PRINCIPLES:
 ======================================================================
 RULE: Semantic Phrase Segmentation by Role Continuity
@@ -949,20 +1578,33 @@ Relation is always from CMF toward CMT. This preserves polarity and rhetorical f
 🔸 HDL block — Headless Action
 ======================================================================
 
-HDL block declares H_* identifier that is licensed in CNJ block as a first class semantic node. 
-It uses particle $to as a connector with other identifiers.
+Delcaration Rules:
 
-----------------------------------------------------------------------
-Formal Syntax
+HDL block declares an H_* identifier that is licensed as a first-class
+semantic node in DFS and may be directly targeted by CNJ operators.
+
+HDL represents infinitival, propositional, or intentional content
+that does not assert a factual event and therefore MUST NOT be encoded
+as EVT or EVP.
+
+HDL uses the surface particle `$to` as a connector between the governing
+predicate and the content span when such particle is present in the source.
+
+----------------------------------------------------------------------  
+Formal Syntax  
 ----------------------------------------------------------------------
 
-<HDL  
-  HDL-ID: H_*  
-  SRF: "<infinitival span>"  
-  CLS: purpose | reason | condition | result | enablement  
-       | expectation | content | directive | evaluation  
+<HDL
+  HDL-ID: H_*
+  SRF: "<infinitival or propositional span>"
+  VRB: verb_lemma
+
+  OBJ-BLOCK   // identical in structure to OBJ blocks in EVT / EVP
+  CRA-BLOCK   // identical in structure to CRA blocks in EVT / EVP
+
+  CLS: purpose | reason | condition | result | enablement
+       | expectation | content | directive | evaluation
 LHD>
-
 ----------------------------------------------------------------------
 Semantic Classes
 ----------------------------------------------------------------------
@@ -1661,423 +2303,6 @@ to the top of an oak tree.
 Example:   
 Richard received CTL-phrase:[an email from his bank] *complementizer:[that] 
 he was preselected for a home equity loan.
-
-======================================================================
-🔸 CNJ SURFACE OPERATORS  (surface-bound; no abstract connectors) 
-   Classification is by surface function. 
-   Operators are tokens/phrases as they appear (snake_case). 
-   Examples are illustrative; inventory is open-ended.
-======================================================================
-1) coordination and list-building
-======================================================================
-and
-or
-nor
-as_well_as
-along_with
-plus
-together_with
-as_also
-both_and
-either_or
-neither_nor
-not_only_but_also
-
-======================================================================
-2) subordination and clausal embedding (complementizers / content-linkers)
-======================================================================
-that
-whether
-if
-wh_what
-wh_who
-wh_whom
-wh_which
-wh_where
-wh_when
-wh_why
-wh_how
-
-======================================================================
-3) adverbial clause introducers (time, condition, concession, reason, purpose, result)
-======================================================================
-# time / sequence
-when
-whenever
-while
-as
-as_soon_as
-once
-until
-till
-before
-after
-since
-now_that
-by_the_time
-the_moment
-as_long_as
-
-# condition / contingency
-if
-unless
-provided_that
-providing_that
-as_long_as
-on_condition_that
-in_case
-in_case_of
-supposing
-assuming
-given_that
-even_if
-only_if
-
-# concession / contrast (operator-like)
-though
-although
-even_though
-whereas
-while_contrast
-despite_that
-in_spite_of_that
-granted_that
-
-# reason / explanation
-because
-since_reason
-as_reason
-given_that
-seeing_that
-for_the_reason_that
-
-# purpose
-so_that
-in_order_that
-lest
-
-# result / consequence
-so
-so_that_result
-so_much_that
-such_that
-therefore
-thus
-hence
-consequently
-as_a_result
-
-======================================================================
-4) relative clause introducers / relativizers
-======================================================================
-who
-whom
-which
-that_rel
-whose
-where_rel
-when_rel
-why_rel
-of_which
-to_whom
-in_which
-by_which
-
-======================================================================
-5) comparison and scalar operators
-======================================================================
-than
-as_as
-not_as_as
-as_..._as
-more_than
-less_than
-rather_than
-instead_of
-like
-unlike
-similar_to
-different_from
-
-======================================================================
-6) alternative, exception, restriction
-======================================================================
-except
-except_that
-except_for
-other_than
-rather_than
-instead
-only
-just
-merely
-at_least
-at_most
-
-======================================================================
-7) discourse-structuring markers (surface anchors; keep only if you still want cnj)
-======================================================================
-however
-nevertheless
-nonetheless
-still
-yet
-on_the_other_hand
-by_contrast
-instead
-otherwise
-moreover
-furthermore
-also
-besides
-in_addition
-for_example
-for_instance
-in_particular
-namely
-that_is
-in_other_words
-in_sum
-overall
-
-======================================================================
-8) evidential / report / stance operators (surface unary; often best as crb d_* not cnj)
-======================================================================
-apparently
-reportedly
-allegedly
-supposedly
-purportedly
-presumably
-seemingly
-ostensibly
-evidently
-clearly
-certainly
-undoubtedly
-probably
-likely
-unlikely
-maybe
-perhaps
-
-======================================================================
-9) free-choice concessive operators (your new primitives; unary over degree/manner/etc.)
-======================================================================
-no_matter_how
-no_matter_what
-no_matter_who
-no_matter_where
-no_matter_when
-no_matter_which
-regardless_of_how
-regardless_of_what
-regardless_of_whether
-irrespective_of_how
-come_what_may
-whatever
-whoever
-wherever
-whenever
-however_much
-however_many
-however_long
-
-======================================================================
-10) counterfactual / modal framing (surface operators)
-======================================================================
-as_if
-as_though
-if_only
-would_that
-suppose
-supposing_that
-imagine_that
-
-======================================================================
-11) quotation / speech framing (surface clause linkers)
-======================================================================
-quote
-unquote
-according_to
-as_claimed_by
-as_reported_by
-as_stated_by
-
-======================================================================
-12) punctuation operators (optional; only if you treat punctuation as cnj surface)
-======================================================================
-comma
-semicolon
-dash
-colon
-paren_open
-paren_close
-quote_open
-quote_close
-
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-======================================================================
-🔸 SLK CONNECTORS (MICROSEMANTIC)
-======================================================================
-These relations cover identity, taxonomy, structure, quantity, quality,
-possession, spatial topology, motion, evaluation, perception,
-communication, and any microsemantic needed for evt/cpl/enb/crb/atb.
-
-======================================================================
-identity, taxonomy, similarity
-======================================================================
-is_a
-subtype_of
-instance_of
-identical_to
-similar_to
-alias_of
-
-======================================================================
-structure / mereology
-======================================================================
-has_part
-part_of
-composed_of
-layer_of
-segment_of
-
-======================================================================
-quantity / measure
-======================================================================
-has_quantity
-has_unit
-count
-fraction_of
-percentage_of
-bounded_by
-
-======================================================================
-evaluation / polarity
-======================================================================
-positive
-negative
-important
-dangerous
-useful
-irrelevant
-
-======================================================================
-attributes, states, material properties
-======================================================================
-has_attribute
-has_state
-has_status
-has_value
-is_colored
-is_shaped
-is_made_of
-has_temperature
-
-======================================================================
-possession, control, access
-======================================================================
-owns
-controls
-assigned_to
-access_to
-
-======================================================================
-spatial (attention-driven: figure > ground)
-======================================================================
-at
-inside
-outside
-on
-near
-adjacent_to
-above
-below
-from
-to
-through
-across
-between
-
-# topological (rcc-style)
-disjoint_from
-touching
-overlapping
-contained_in
-equal_region
-
-# boundary / exotic
-partially_inside
-protrudes_out_of
-recessed_into
-straddles_boundary
-surrounds
-
-# motion / path
-enters
-exits
-approaches
-recedes_from
-circles_around
-intersects_path
-
-======================================================================
-perception & communication
-======================================================================
-perceives
-communicates
-refers_to
-describes
-
-======================================================================
-free-choice, concessive, surface-bound unary operators
-======================================================================
-no_matter_how
-no_matter_what
-no_matter_where
-however
-whatever
-whichever
-
-======================================================================
-purpose, intention, internal causal nuance (microsemantic only)
-======================================================================
-aims_at
-intends
-desires
-motivates
-enables
-prevents
-facilitates
-
-======================================================================
-emotion, attitude, stance (microsemantic-only)
-======================================================================
-likes
-dislikes
-fears
-trusts
-suspects
-expects
-prefers
-
-======================================================================
-social / institutional relations
-======================================================================
-employs
-reports_to
-member_of
-part_of_group
-authorized_for
-
-======================================================================
-information structure (non-discourse)
-======================================================================
-focus_on
-background_of
-about
 
 ======================================================================
 DUAL ENCODING STANDARD (VERBOSE MODE ↔ COMPACT MODE)
