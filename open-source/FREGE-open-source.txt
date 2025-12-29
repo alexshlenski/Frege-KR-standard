@@ -655,7 +655,8 @@ C10 — COMPARATIVE & SCALAR FRAMING
 
 $more_than
 $less_than
-$as_..._as
+$as_as
+$the_the
 $rather_than
 $instead_of
 
@@ -1291,6 +1292,7 @@ MANDATORY: Nesting of ATB blocks is strictly prohibited!
   AXS: semantic.axis.path
   DSC: discourse_modifier // optional: apparently, presumably, evidently, approximately, ...
   MSE-BLOCK // structurally and semantically the same as in ENB
+  LNK-BLOCK // structurally and semantically the same as in ENB
 BTA>
 
 ----------------------------------------
@@ -1537,6 +1539,10 @@ Declaration rules:
 
 • REL block encodes relations between notions including but not limited 
   to comparison, subordination, dependency, transformation stages, etc.
+
+• The only location of REL block is CNJ block, therefore the encoded relation
+  must be a chainlink of fabula. A relation that does not bear fabula must be
+  encoded by MSE/LNK.
 
 • RLF and RLT parameters must be of the the same type (e_* | n_* | q_* | Ev_*)
 
@@ -2193,7 +2199,11 @@ Declaration Rules:
 ----------------------------
 
 The CTL block declares a fabular control node that binds a controlling
-ontological space to a subordinate event.
+ontological space to subordinate events.
+
+A single CTL MUST be created for each non-authorial ontological space 
+introduced by a controlling phrase. All fabula elements within that space 
+MUST be controlled by the same CTL, which is lifted to the CNJ level.
 
 A CTL block is comprised of:
 
@@ -2210,6 +2220,9 @@ CTL Block Syntax
 <CTL
   CTL-ID: Ct_<control_block_id>
   CTL: e_* | n_*        // controlling entity or nominalization
+  SRF: <surface>
+  MSE-BLOCK // structurally and semantically the same as in ENB
+  LNK-BLOCK // structurally and semantically the same as in ENB
   EVT: Ev_*             // subordinate event ID
 LTC>
 
