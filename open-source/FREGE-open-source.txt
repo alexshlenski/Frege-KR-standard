@@ -33,6 +33,7 @@ This invariant is global and mandatory.
 Violations correspond to irony, absurdity, metaphor, or error and MUST
 NOT appear in canonical representations.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 FREGE IDENTIFIERS
 ======================================================================
@@ -89,6 +90,13 @@ pst - perspectival
 prb - probabilistic
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+Discourse   | Identifier format | Declaration block | 
+======================================================================
+Generic          d_*                   implicit
+
+No subtypes
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 Attribute   | Identifier format | Declaration block | 
 ======================================================================
 Specific         a_s_<sbt>_*           ATB
@@ -104,13 +112,6 @@ Always specific  F_*                   FAB
 Headless Action | Identifier format | Declaration block | 
 ======================================================================
 Always specific  H_*                   HDL
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-Discourse   | Identifier format | Declaration block | 
-======================================================================
-Generic          d_*                   implicit
-
-No subtypes
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 Event       | Identifier format | Declaration block | 
@@ -131,20 +132,20 @@ Always specific  q_<sbt>_*           QCL
 Same subtypes as Entity.
  
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-Relation        | Identifier format | Declaration block | 
+Comparison      | Identifier format | Declaration block | 
 ======================================================================
-Always specific  R_*                 REL
+Always specific  C_*                 CMP
 
 No subtypes
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-FREGE SEMANTIC CLASSIFCATION
-Matrix A contains classification of notion used in FREGE NS fields
-(namespaces) and MSE blocks (microsemantic lexemes annotation).
-Matrix B contains classification of semantic links used in LNK blocks
-as microsemantic connectors. 
+                   FREGE SEMANTIC CLASSIFCATION
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 MATRIX A — SEMANTIC OBJECTS (NOTIONS)
+______________________________________________________________________
+Matrix A contains classification of notion used in FREGE NS fields
+(namespaces) and MSE blocks (microsemantic lexemes annotation).
 ======================================================================
 
 These are intrinsic, modal, or evaluative descriptors of ONE bearer.
@@ -269,8 +270,12 @@ conflict_context
 cooperation_context
 competition_context
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 MATRIX B — SEMANTIC CONNECTORS (LINKS)
+🔸 MATRIX B — NON-DISCOURSE SEMANTIC CONNECTORS
+______________________________________________________________________
+Matrix B contains classification of semantic links used in LNK blocks
+as microsemantic connectors and inside EVT blocks
 ======================================================================
 
 These ONLY exist as relations between ≥2 objects.
@@ -513,10 +518,10 @@ GLOBAL INVARIANTS
 • Identity, mereology, causality are ALWAYS connectors.
 • Surface language never appears here.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 MATRIX C — DISCOURSE LEVEL / CNJ OPERATORS
-======================================================================
-
+🔸 MATRIX C — DISCOURSE LEVEL CONNECTORS / CNJ OPERATORS
+______________________________________________________________________
 In FREGE discourse is an umbrella term that encompasses all layers of the
 narrative flow and topology, such as but not limited to:
 
@@ -585,6 +590,7 @@ Example:
 
 ✦ Connector/Delimiters are the most prolifing group of CNJ, whose roles
   are meticulously classified in Matrix C.
+======================================================================
 
 ----------------------------------------------------------------------  
 C1 — ADDITIVE & COORDINATIVE FLOW  
@@ -815,17 +821,107 @@ $paren_*
 GLOBAL CNJ INVARIANTS
 ======================================================================
 
+• CNJ = surface-driven discourse flow.
+• CNJ is not logic, not ontology, and not world structure.
 • CNJ operators MUST be traceable to surface tokens.
-• CNJ normalization MAY collapse inflectional or orthographic variants
-  but MUST NOT introduce abstract conceptual operators.
 • CNJ never creates entities.
 • CNJ never creates relations.
 • CNJ only preserves surface grouping, ordering, and framing.
-• CNJ is not logic, not ontology, and not world structure.
-• Removing all CNJ leaves a set of unordered semantic frames.
-• CNJ = surface-driven discourse flow.
-• LINKS = world structure and microsemantic relations.
+• Removing CNJ makes DFS a set of unordered facts.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+======================================================================
+🔸 MATRIX D — DISCOURSE QUALIFICATION (UNARY OPERATORS)
+======================================================================
+
+Matrix D defines unary discourse-level qualification operators that
+express the speaker’s epistemic, inferential, quantitative, or attitudinal
+stance toward an assertion.
+
+Matrix D operators:
+
+• do NOT introduce entities;
+• do NOT introduce relations;
+• do NOT encode world semantics;
+• do NOT affect fabular structure;
+• do NOT encode discourse topology.
+
+They qualify assertions without changing their internal semantic content.
+
+----------------------------------------------------------------------
+D1 — EVIDENTIAL QUALIFICATION (truth-status markers)
+----------------------------------------------------------------------
+
+apparently
+evidently
+seemingly
+ostensibly
+reportedly
+allegedly
+supposedly
+purportedly
+presumably
+
+Description:
+Marks the epistemic source or evidential status of an assertion
+without asserting its truth or falsity.
+
+----------------------------------------------------------------------
+D2 — QUANTITATIVE SCOPE QUALIFICATION
+----------------------------------------------------------------------
+
+mostly
+predominantly
+largely
+broadly
+generally
+
+Description:
+Qualifies the coverage or scope of an assertion without introducing
+numerical quantification or distribution.
+
+----------------------------------------------------------------------
+D3 — ASSERTIVE ATTITUDE QUALIFICATION
+----------------------------------------------------------------------
+
+undoubtedly
+certainly
+
+Description:
+Encodes speaker confidence or assertion strength.
+Does NOT encode evidence or inference.
+
+----------------------------------------------------------------------
+D4 — UNARY INFERENTIAL QUALIFICATION
+----------------------------------------------------------------------
+
+logically
+accordingly
+consequently
+thus
+
+Description:
+Encodes unary inferential framing of an assertion.
+These operators indicate that the assertion is presented as derived
+rather than directly observed.
+
+IMPORTANT:
+These operators are unary only and MUST NOT be used as CNJ connectors.
+
+======================================================================
+GLOBAL INVARIANTS — MATRIX D
+======================================================================
+
+• Matrix D operators are unary and do not create relations.
+• Matrix D operators MUST NOT appear in CNJ.
+• Matrix D operators MUST NOT introduce entities, events, or attributes.
+• Matrix D operators do not require CRB blocks.
+• Matrix D operators may only be referenced via CRA blocks.
+• Matrix D operators do not affect fabular status of events.
+
+Removing Matrix D operators leaves the propositional content intact.
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 FREGE MAIN ARCHITECTURAL PRINCIPLES:
 ======================================================================
@@ -862,6 +958,7 @@ If a fact is provided as internal detailing used to identify or characterize an 
 through microsemantics of ENB, CRB, and ATB blocks, and MUST NOT generate EVT or CPL.
 
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 FREGE BLOCKS
 ======================================================================
@@ -869,6 +966,7 @@ through microsemantics of ENB, CRB, and ATB blocks, and MUST NOT generate EVT or
 FREGE is a declarative block language. Every semantic type in FREGE is declared by a specific block.
 Complex semantics is expressed by relations between blocks.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 ENB-block — Formal Syntax
 ======================================================================
@@ -1052,121 +1150,103 @@ BNE>
   NS: dom.transport.infrastructure
 BNE>
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 QCL block - Quantified Collection
+🔸 QCL block — Quantified Collection
 ======================================================================
 
 Declaration Rules:
 
-• QCL declares a collection as a plural semantic referent exported by the 
-  surface. 
+• QCL declares a plural semantic referent (a collection) explicitly exported
+  by the surface.
 
-• QCL does not add any extra semantics to the one exported by the surface 
-  nor it defines enumerable membership or cardinality resolution.
+• QCL does NOT introduce any additional semantics beyond what is expressed
+  in the surface and does NOT resolve enumerable membership or exact
+  cardinality.
 
-• Quantifier phrase in QCL is surface bound, its meaning is decomposed and 
-  described by MSE/LNK microsemantic segments.
+• The quantifier phrase in QCL is surface-bound; its meaning MUST be fully
+  decomposed and explained by MSE/LNK microsemantic segments.
 
-• singular object parameter accepted by ELM must be either a generic entity
-  or be previously declared by ENT block.
-  
-• QCL must only be created when the resulting collection face any kind of
-  distribution explicitly described by the surface, which requires ALC block.
-  If said distribution is not exported by the surface, DFS does not need a 
-  QCL/ALC pair, and the plural object must be declared by ENB block and 
-  non-operational quantification is described by MSE/LNK segment.
+• The singular element parameter (ELM) MUST be either:
+    – a generic entity, or
+    – an entity or nominalization previously declared by an ENB block.
 
-Formal syntax:
+• QCL MUST be created if and only if the surface explicitly exports
+  distribution or allocation semantics that require an ALC block.
+  If no such distribution is present, QCL MUST NOT be created.
 
-<QCL 
+• If no ALC is required, plural reference MUST be encoded via ENB and
+  non-operational quantification MUST be described in MSE/LNK.
+
+Formal Syntax:
+
+<QCL
   QCL-ID: q_*
   ELM: e_* | n_*
   SRF: <quantifier surface syntagm>
   MSE:
       u_1: MSE_Unit_1 : semantic_role
-      u_2: MSE_Unit_2 : semantic_role
       ...
-      u_N: MSE_Unit_N : semantic_role
   LNK:
       u_N: SLK_link: u_M
-      ...
-      u_K: SLK_link: u_L
 LCQ>
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 ALC Block — Allocation of Collection
+🔸 ALC block — Allocation of Collection
 ======================================================================
 
-ALC block allocates a quantified collection of entites or nominalizations and
-exposes the allocated collection to:
+Declaration Rules:
 
-• an arbitrary group event (an event that occurs with each element of the collection).
-• a distribution event (the event that distributes all or part of the collection).
+• ALC is a scope operator that restricts the applicability of one or more
+  events to a specified portion or distribution of a quantified collection.
 
-Example:
+• ALC does NOT encode an action, occurrence, relation, or circumstance.
 
-1. 1000 microchips where stored in the storage room A. 
-
-we declared the collection:
-
-2. Out of those microchips the stock manager moved a half to the storage room B. 
-
-we created the first allocation "Out of those microchips" that allocates the
-collection to the first distribution event.
-
-3. Out of the quantity that remained in storage room A and was re-counted by the
-   manager, 100 microchips were packed and shipped to the customer.
-
-we created a second collection, which is a the remaining of the first collection
-and created the second allocation "From the remaining quantity" that allocates 
-that second collection to:
-
-first arbitrary event: "remained" -- linked by complementizer "that"
-second arbitrary event: "re-counted" -- linked to the first event by "and", and
-via this "and" the valency of "that" reaches the second arbitrary event.
-  
-----------------------------------------------------------------------
-Formal syntax
+----------------------------------------------------------------------  
+Formal Syntax
 ----------------------------------------------------------------------
 
 <ALC
   ALC-ID: Al_*
-  SRF: <surface syntagm>  
-  APH: for | per | out_of | among | within | across | throughout | ... // allocation phrase
-  CLN: q_*   // collection of entities or nominalizations
+  SRF: <surface syntagm>
+  APH: for | per | out_of | among | within | across | throughout | ...
+  CLN: q_*
 CLA>
 
-APH is an open but restricted class.
-ALC is licensed only if APH creates a clear an unambiguous allocation of the
-collection to the subsequent event.
-Collection q_* must be previously declared by QCL block.
+where:
+• CLN MUST reference a QCL previously declared in the same DFS.
+• APH is an open but restricted class of allocation phrases.
+• ALC is licensed only if APH introduces a clear and unambiguous allocation
+  of the collection with respect to subsequent events.
 
+----------------------------------------------------------------------  
+Canonical Constraints
 ----------------------------------------------------------------------
-Canonical constraints
-----------------------------------------------------------------------
 
-The Builder is not responsible if allocation/distribution ratio makes any sence. 
-The only Builder's responsibility is to properly create and apply the ALC block.
-
-• ALC MUST NOT be embedded into SBJ, OBJ, CRB, ENB, or EVT blocks.
-• ALC MUST participate in CNJ.
-• ALC MUST be linked to events via explicit complementizers.
+• ALC MUST NOT be embedded in SBJ, OBJ, ENB, CRB, EVT, or CPL blocks.
+• ALC MUST appear exactly once in the CNJ block.
+• ALC MUST be linked to events exclusively via explicit CNJ complementizers.
 • ALC introduces scope, not action.
-• ALC is not part of discourse.
-• Two adjacent ALC nodes in CNJ are not allowed. 
-• ALC cannot be the only node in CNJ. 
-• ALC cannot be the terminating in CNJ. 
+• ALC does not modify event semantics, only their domain of applicability.
+• Two adjacent ALC nodes in CNJ are forbidden.
+• ALC cannot be the sole node in CNJ.
+• ALC cannot be the terminal node in CNJ.
 
+----------------------------------------------------------------------  
+CNJ Licensing
 ----------------------------------------------------------------------
-CNJ licensing
-----------------------------------------------------------------------
 
-ALC is connected to adjacent Ev_* nodes by the following complementizers::
+ALC may be connected to Ev_* nodes only by the following complementizers:
 
-• $which / $that — links ALC to the first arbitrary event
+• $which / $that — links ALC to arbitrary group event(s)
 • $outcome — links ALC to resulting distribution event(s)
 
-Typical CNJ schematics:
+Any other CNJ linkage involving ALC invalidates DFS.
+
+----------------------------------------------------------------------  
+Typical CNJ Schematics
+----------------------------------------------------------------------
 
 Fig. 1.
 
@@ -1194,64 +1274,58 @@ Fig. 2.
       ...
 JNC>
 
-In Fig. 2, $which applies to the entire $and-group of arbitrary events
-and $outcome applies to the entire $and-group of distribution events. 
+In Fig. 2, $which applies to the entire $and-group of arbitrary events,
+and $outcome applies to the entire $and-group of distribution events.
 
-ALC MUST NOT be linked to the subsequent events by any other link.
+ALC MUST NOT be linked to events by any other CNJ connector.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 CRB block —  Circumstantial
+🔸 CRB block — Circumstantial
 ======================================================================
 MANDATORY: Nesting of CRB blocks is strictly prohibited!
 
 Declaration rules:
 
-• CRB encodes only the circumstantial semantic layer exported by the 
-  surface and nothing else. CRB cannot substitue entity, nominalization,
-  event or any other semantic.
+• CRB encodes only the circumstantial semantic layer exported by the
+  surface and nothing else. CRB cannot substitute entity, nominalization,
+  event, or any other semantic type.
 
-• CRB describes circusmtances of event or action, including but not limited
-  to time, place, manner, cause, condition, purpose, result, degree, concession, etc.
+• CRB describes circumstances of an event or action, including but not
+  limited to time, place, manner, cause, condition, purpose, result,
+  degree, concession, etc.
 
-• Aggregation of several circusmtances into one CRB is strictly forbidden. Each
-  circusmtance, even bearing the same semantics, must be declared as a separate CRB,
-  
-• CRB must fully decompose and explain the components of circumstantial group in 
-  the MSE/LNK segments (microsemantics). Cutting corners on microsemantics is 
-  strictly forbidden and leads to invalidation of the DFS.
+• Aggregation of several circumstances into one CRB is strictly forbidden.
+  Each circumstance, even bearing the same semantic class, must be
+  declared as a separate CRB.
+
+• CRB must fully decompose and explain the components of the circumstantial
+  group in the MSE/LNK segments (microsemantics). Missing or incomplete
+  microsemantics invalidates DFS.
+
+• MSE/LNK segments may reference relevant nodes declared by other blocks
+  to express stacked semantics.
+
+• Circumstantial nodeid c_* declared by a CRB block is licensed only in a
+  CRA block that represents it inside an EVT-series block. Placing c_*
+  in any other block invalidates DFS.
 
 Formal Syntax:
 
 <CRB
   CIR-ID: c_node_id
-  SRF: "<original Circumstantial span>"
-  CLS: time|place|manner|cause|condition|purpose|result|
-       degree|concession|comparison|accompaniment|instrument
-  DSC: discourse_modifier // optional: apparently, presumably, evidently, approximately, ...
-  MSE/LNK block // structurally and semantically the same as in ENB
+  SRF: "<original circumstantial span>"
+  CLS: time | place | manner | cause | condition | purpose | result |
+       degree | concession | comparison | accompaniment | instrument
+  MSE/LNK block   // structurally and semantically identical to ENB
 BRC>
 
-where 
-• `surface` preserves the exact circumstantial Circumtantial.
-• `ID` is the canonical logical identifier for this Circumtantial.
-• `CLS` defines the semantic class of the Circumtantial.
+where:
+• SRF preserves the exact surface circumstantial span.
+• CIR-ID is the canonical logical identifier for this circumstantial.
+• CLS defines the semantic class of the circumstantial.
 
-A CRB block may reference ENBs or other CRBs through ENT-ID / NOM-ID / CRB-ID 
-identifiers to express stacked semantics. 
-
-CRB declares Circumtantial ID that is referred in CRA block inside EVT block.
-
-------------------------------------------------------------------
-For this block and other blocks using DSC option, apply this "DSC vs Degree" rule:
-
-Use DSC only for lexemes that explicitly encode the speaker’s epistemic or evidential stance toward the truth of a circumstance.
-Lexemes that specify precision, extent, or position on a scale (degree, accuracy, granularity) MUST be encoded in MSE, not in DSC,
-even if they pragmatically imply confidence.
-
-Test:
-– If the lexeme answers “how certain is the speaker?”, use DSC.
-– If the lexeme answers “how precise / how much / to what extent?”, do NOT use DSC.
-
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 FAB block — Fabular Adjunct
 ======================================================================
@@ -1326,40 +1400,38 @@ Test:
 – If the lexeme answers “how much / how far / how long / to what extent?”,
   do NOT use DSC.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ========================================
 🔸 ATB block — Attribute Qualification Block
 ========================================
 
-Purpose:
-ATB encodes a structured (non-atomic) qualitative attribute as a
-canonical, referencable semantic object.
+Declaration Rules:
 
-Generic atomic attributes do not need declaration. They are declared implicitly 
-by identifiers formatted as a_g_* (generic attribute).
+• ATB encodes a structured (non-atomic) qualitative attribute as a
+  canonical, referencable semantic object.
 
-Atomic attribites that export context related semantics (Tropes) need formal
-declaration with an explanation in a single MSE line. 
+• Generic atomic attributes do not require declaration. They are declared
+  implicitly by identifiers formatted as a_g_* (generic attribute).
 
-Example:
+• Atomic attributes that export context-related semantics (tropes)
+  MUST be formally declared using ATB and explained via microsemantics.
 
-Bastardized solution (engineering slang)
+• ATB answers the question “КАКОЙ?” and NEVER encodes manner, comparison,
+  circumstances, processes, or events.
 
-ATB answers the question "КАКОЙ?" (not "КАК?") and never encodes manner, comparison,
-circumstances, or events.
+MANDATORY: Nesting of ATB blocks is strictly prohibited!
 
 ----------------------------------------
 Formal Syntax
 ----------------------------------------
-MANDATORY: Nesting of ATB blocks is strictly prohibited!
 
 <ATB
   ATR-ID: a_*
   SRF: "original attribute span"
   ATR: attribute_lemma
   AXS: semantic.axis.path
-  DSC: discourse_modifier // optional: apparently, presumably, evidently, approximately, ...
-  MSE-BLOCK // structurally and semantically the same as in ENB
-  LNK-BLOCK // structurally and semantically the same as in ENB
+  MSE-BLOCK   // structurally and semantically identical to ENB
+  LNK-BLOCK   // structurally and semantically identical to ENB
 BTA>
 
 ----------------------------------------
@@ -1369,10 +1441,10 @@ Atomic Attribute Rule (MANDATORY)
 If an attribute is:
 • single-word
 • non-structured
-• not a trope
+• non-tropic
 
-→ encode as generic:
-    ga_strong, ga_fast, ga_red
+→ encode as generic atomic:
+    a_g_strong, a_g_fast, a_g_red
 
 ATB MUST NOT be created for generic atomic attributes.
 
@@ -1384,18 +1456,19 @@ ATB MUST be created if the attribute:
 • is multi-word or internally structured
 • requires microsemantic decomposition
 • must be referenced by identifier (a_*)
-• functions as a composed qualifier of an entity or state
+• functions as a composed qualitative predicate
 • exports context-related semantics (trope)
 
 ----------------------------------------
 Ontological Constraints
 ----------------------------------------
 
-ATB introduces an identifier (a_*), which is an obligatory terminal graph node.
-Therefore,
-• ATB does NOT participate in CNJ or LGK
+ATB introduces an identifier (a_*), which is a terminal semantic node.
+
+Therefore:
 • ATB has no independent scope
-• ATB is interpreted only through its host
+• ATB does not participate in discourse topology
+• ATB is interpreted exclusively through its host
 
 ----------------------------------------
 ATB Variables (a_*) — Legal Reference Scope
@@ -1403,19 +1476,24 @@ ATB Variables (a_*) — Legal Reference Scope
 
 Identifiers declared by ATB (a_*) MAY be referenced ONLY in:
 
-1) CPL — Copular Predication Block  
-   Role: predicate of state or state transition (“what kind”)
+1) CPL — Copular Predication Block
+   Role: qualitative predicate (“what kind”)
 
-2) ENB  MSE — Nominal Phrase Microsemantics  
+2) ENB MSE — Nominal Phrase Microsemantics
    Role: intrinsic qualification of an entity
 
-Attribute Identifiers (a_*) make no sense and are STRICTLY FORBIDDEN in:
+----------------------------------------
+STRICTLY FORBIDDEN
+----------------------------------------
+
+Attribute identifiers (a_*) MUST NOT appear in:
 • EVT
 • CRB
-• REL
-• CNJ / LGK
+• CMP
+• CNJ
+• FAB
 
-Any forbidden occurrence INVALIDATES FSP.
+Any forbidden occurrence INVALIDATES DFS.
 
 ----------------------------------------
 Microsemantic Requirement
@@ -1425,39 +1503,41 @@ For structured (multi-word) attributes:
 • MSE block is MANDATORY
 • LNK block is MANDATORY
 • every surface token MUST be represented
-• microsemantic rules identical to ENB
+• microsemantic rules are identical to ENB
 
 ----------------------------------------
-Referencing Rules INSIDE ATB (as well as all other blocks)
+Referencing Rules (Global)
 ----------------------------------------
 
-Referenced identifiers must play a role compatible with the block’s ontological level 
-and dominance direction.
+Referenced identifiers must respect ontological dominance and
+directionality constraints of the hosting block.
 
 ----------------------------------------
-Reference Examples (Canonical)
+Canonical Examples
 ----------------------------------------
 
 ATB declaration:
 <ATB
-  ID: a_mentally_resilient
+  ATR-ID: a_mentally_resilient
   SRF: "mentally resilient"
   ATR: resilient
   AXS: psychological.resilience
   MSE
-  ...
+    ...
+  LNK
+    ...
 BTA>
 
-1) Reference from ENB :
+Reference from ENB:
 <ENB
   ID: e_operator
   SRF: "the mentally resilient operator"
   NS: dom.human.professional
   MSE
-  ...
+    ...
 BNE>
 
-2) Reference from CPL (state):
+Reference from CPL (state):
 <CPL
   <SBJ: e_operator>
   <ATA: a_mentally_resilient>
@@ -1467,62 +1547,78 @@ PLC>
 🔸 ATA Block — Attribute Application
 ==============================================================
 
-ATA-BLOCK ::=
-    <ATA: a_nodeid>
+ATA-BLOCK ::= <ATA: a_nodeid>
 
 nodeid ::= a_* | a_g_*
-  // a_*   : declared attribute identifier (ATB block)
-  // a_g_* : generic atomic attribute (implicit, no ATB block)
+  // a_*   : declared structured attribute (ATB)
+  // a_g_* : generic atomic attribute (implicit)
 
-ATA introduces the ◼Attribute node◼ as a predicate of copular predication,
-answering the question “КАКОЙ?” and asserting a qualitative state or
-state transition of the subject.
+ATA introduces an attribute as the predicate of copular predication,
+asserting a qualitative STATE of the subject and answering the
+question “КАКОЙ?”.
 
-MANDATORY RULE:
-ATA block must be located ONLY in CPL block after ACT and OBJ blocks.
-Placing ATA block in EVT, CRB, CNJ, or LGK invalidates FSP immediately.
+----------------------------------------
+Mandatory Rules
+----------------------------------------
 
-Ontological Constraints:
-• ATA does NOT introduce new semantics
-• ATA references an already existing attribute identifier only
-• ATA has no independent scope
-• ATA does NOT modify realization or process
-• ATA is evaluated exclusively through the copula
+• ATA MUST appear ONLY inside CPL.
+• ATA MUST reference an existing attribute identifier.
+• ATA MUST NOT introduce new semantics.
+• ATA MUST NOT encode discourse, modality, or evaluation.
+• ATA has no independent scope.
+• ATA is evaluated exclusively through the copula.
 
-Multiplicity Rule:
-• Multiple ATA blocks in one CPL are FORBIDDEN
-• Attribute composition MUST be performed in ATB
+----------------------------------------
+Multiplicity Rule
+----------------------------------------
 
-Normative Summary:
-• CRA applies circumstantials to events
-• ATA applies attributes to copular predication
-• CRA answers “КАК?”
-• ATA answers “КАКОЙ?”
+• Multiple ATA blocks inside a single CPL are FORBIDDEN.
+• Attribute composition MUST be performed inside ATB.
 
+----------------------------------------
+Normative Summary
+----------------------------------------
+
+• CRA applies circumstantials to events        → “КАК?”
+• ATA applies attributes to copular predicates → “КАКОЙ?”
+• CRB decomposes circumstantial structure
+• ATB decomposes qualitative structure
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ==============================================================
 🔸 CPL block — Copular Predication (Classification & Attributes)
 ==============================================================
-
-CPL encodes static, non-eventive, timeless facts about an entity.
-Unlike EVT, CPL does not describe occurrences or changes. 
-CPL declares:
-• what entity or nominalization is, 
-• what properties it has, 
-• what role it fulfills,
-• what it consists of, 
-• where it is situated by default,
-• how it is different or similar or the same as something else
-
-CPL statements form part of the global semantic DAG but do NOT introduce
-events or temporal structure.
-
---------------------------------------------------------------
-5.1. CPL - Formal Syntax
---------------------------------------------------------------
 MANDATORY: Nesting of CPL blocks is strictly prohibited!
 
-Copula does not need ACT block because the only admitted verbs confined to
-`is` and `are`.
+Declaration Rules:
+
+• CPL encodes conclusions about static, non-eventive, timeless way of being 
+  of an entity or nominalization.
+• Conclusions don't not exist in the world, therefore CPL is a discourse step
+  and must be in CNJ block.
+• CPL declares:
+  • what entity or nominalization is, 
+  • what properties it has, 
+  • what role it fulfills,
+  • what it consists of, 
+  • where it is situated by default,
+  • how it is different or similar or the same as something else
+• CPL can encode a conclusion about occurrent but does not introduce actual
+  occurrent into the fabula. The only way to do it is to place the Ev_* node
+  into CNJ block.
+
+Formal Syntax:
+
+<CPL:id=Cp_*
+  <SBJ: node_id>
+  <PRD: is_a | has_property | has role | has_status| consists_of | default_location | identical_to | 
+  $and/$or OBJ-BLOCK [OBJ-BLOCK ...] | $and/$or OBJ-BLOCK [OBJ-BLOCK ...] ATA-BLOCK
+PLC>
+
+where 
+node_id::= ENT-ID | NOM-ID | HDL-ID // subject must be entity, or nominalization, or headless action.
+PRD::= predicate verb (static verb only)
+
 
 If something `was` or `will be` or `become` or `appear to be` or 'made of', 
 it is semantically a regular event because it is not stative.
@@ -1534,21 +1630,12 @@ If assertion can be interpreted as a result of an event, it is EVT, not CPL.
 "A ring is made of silver" - EVT. Someone made it.
 "Caterpillar became a butterfly" - EVT. It was a transformation.
 
-<CPL:id=Cp_*
-  <SBJ: node_id>
-  <PRD: is_a | has_property | has role | has_status| consists_of | default_location | identical_to | 
-  OBJ-BLOCK | ATA-BLOCK
-PLC>
-
-where node_id::= ENT-ID | NOM-ID
-
-Using in CPL block any node types other Entity and Nominalization invalidates DFS.
+Using in CPL block any node types other e_*, n_*, and H_* invalidates DFS.
 
 SBJ, OBJ, and ATA blocks have the same structure and usage as in EVT block.
 
 MANDATORY RULE:
-Do not use EVT block for static descriptions, use CPL block. EVT block 
-is used only for dynamic descriptions - actions and occurrences.
+Using EVT block for static description instead of CPL invalidates DFS. 
 
 --------------------------------------------------------------
 5.2. Semantics
@@ -1563,8 +1650,7 @@ Sky is blue.
 Lucie is a waitress.
 Pig is made of pork.
 Car is in the garage.
-Shark is larger than herring.
-Lee's kungfu is almost as good as Chen's.
+The mission is to find the leak and catch the mole.
 
 This relation is:
 
@@ -1598,20 +1684,21 @@ Use CPL instead of EVT when:
 This keeps the global DAG clean, separates facts from events,
 and preserves reversibility.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 REL Block — Relation Description 
+🔸 CMP Block — Comparison 
 ======================================================================
 
 Declaration rules:
 
-• REL block encodes relations between notions including but not limited 
-  to comparison, subordination, dependency, transformation stages, etc.
+• CMP block encodes comparison between any two notions that could be meaningfully
+  compared with each other.
 
-• The only location of REL block is CNJ block, therefore the encoded relation
-  must be a step of discourse. A relation that does not bear discourse must be
-  encoded by MSE/LNK.
+• The only location of CMP block is CNJ block, because comparison does not exist
+  in the world per se, and thus, it is a discourse step.
 
-• RLF and RLT parameters must be of the the same type (e_* | n_* | q_* | Ev_*)
+• CMF and CMT parameters must both have the compared attribute or CMF must serve
+  as an abstract base for comparision (intensivity scale, milestone, etc.)
 
 • The semantic dimension AXS is the best approximation, not a canon, therefore
   varying after migration of the FSP Builder to a different model is expected.
@@ -1619,52 +1706,58 @@ Declaration rules:
 • The semantic dimension AXS does not add any additional semantics to the one
   exported by the surface, this field must be treated as a pure annotation, and
   not semantic extension.
-  
-• No occurrents, copulas, or any other foreign semantic objects are allowed in
-  REL block. 
 
+• CMP block can carry multiple comparison segments AXS/SRF/MSE/LNK if the surface
+  exports multiple comparisons in one expression (e.g. bigger, faster and stronger).
+  
 Syntax:
-<REL
-  REL-ID: R_*
-  RLF: related from ID
-  RLT: related to ID
-  AXS: the semantic dimension where the relation takes place
-  SRF: "surface phrase"
-  MSE:
-      u_N: MSE_Unit_N: semantic_role
-      ...
-      u_M: MSE_Unit_M: semantic_role
-  LNK:
-      u_N: SLK_link: u_M
-      ...
-      u_K: SLK_link: u_L
-LER>
+<CMP
+  CMP-ID: C_*
+  CMF: compared-from ID
+  CMT: compared-to ID
+  AXS-1: the semantic axis of the compared attribute (red->color hot->temperature)
+  SRF-1: "surface phrase"
+  MSE-BLOCK-1 // structurally and semantically the same as in ENB
+  LNK-BLOCK-1 // structurally and semantically the same as in ENB
+  [
+  AXS-2:
+  SRF-2:
+  MSE-BLOCK-2 
+  LNK-BLOCK-2
+  ...
+  ]
+PMC>
 
 Where
-  RLF | RLT ::= e_* | n_* | q_* | Ev_*
+  CMF | CMT ::= e_* | n_* | q_* | Ev_*
 
 Semantics: 
-REL asserts that CMF relates to CMT the way that SFR has expressed and analyzed by MSE/LNK.
+CMP asserts that CMF is compared to CMT the way that SFR has expressed and analyzed by MSE/LNK.
 
 Interpretation Direction:
-Relation is always from CMF toward CMT. This preserves polarity and rhetorical force.
+Comparison is always from CMF toward CMT. This preserves polarity and rhetorical force.
 
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 HDL block — Headless Action
 ======================================================================
 
 Delcaration Rules:
 
-HDL must be declared if and only if the surface expresses the initial event 
-that has a logical continuation expressed as infinitival, propositional, or 
-intentional content that asserts an event without pointing to its agent.
+HDL must be declared if and only if the surface expresses the initiating
+occurrent that has a fabular continuation expressed as infinitival, 
+propositional, or intentional content asserted as an action with no agent.
 
 HDL block declares an H_* identifier that is licensed as a first-class
 semantic node in DFS and may be directly targeted by CNJ operators.
 
-HDL uses the surface particle `$to` as a connector between the governing
-predicate and the content span when such particle is present in the source.
+When used inside CNJ block, HDL uses the surface particle `$to` as a 
+connector between the governing predicate and the content span when 
+such particle is present in the source.
+
+HDL block used inside CPL as a subject like in "the goal is to win" does 
+not introduce an occurrent into fabula. 
 
 ----------------------------------------------------------------------  
 Formal Syntax  
@@ -1746,35 +1839,38 @@ or is otherwise part of entity phrase,
 In that case encode it as part of the ENB/CRB/ATB microsemantic decomposition of that 
 entity segment.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 EVT/EVQ/EVS/EVP Blocks — unified event descritor
+🔸 EVT/EVQ/EVS/EVP block series — unified event descritor
 ======================================================================
 MANDATORY: Nesting of EVT blocks is strictly prohibited!
 
-This section defines the *canonical* event–level representation in FREGE-2.1.
-The EVT block expresses ◼predicate–argument structure◼, preserving:
+Declaration Rules:
 
-  • surface lexical material (SBJ literal, ACT lemma, PRP prepositions),  
-  • normalized semantic structure (SLK),  
-  • canonical DAG edges SBJ —SLK→ OBJ,  
-  • tense/aspect/modality of the event.
+• EVT block is the only means in FREGE signature to encode a fabular
+  occurrence (diegetic) and a non-fabular occurrence (non-diegetic).
+  Both types of occurrence constitute a discourse step.
 
-EVT is strictly declarative at the argument level and non-procedural:
-inter-event logical relations are handled by CNJ block.
+• EVT block is strictly declarative at the argument level and non-procedural:
+  inter-event propositional relations are handled by CNJ operators.
 
-Formal Syntax
+• EVT block encodes assertion: Ev_X occurs in reality
 
-Use EVT block for declarative statements.
-Use EVQ/EVS blocks for questions.
-Use EVP for projected actions and events, regular procedures and plans.
+• EVQ block encodes question: does Ev_X occur?
+
+• EVS block encodes subjunctive mood: Ev_X would have occured (in case of Y)
+
+• EVP block encodes regular procedures (server backups once a day), habitual 
+  events (rabbits eat carrots), and periodic events (Uncle Jerry eats two 
+  apples a day)
 
 MANDATORY: 
-In the interrogative sentence in the question clause the verb mood in ACT block 
-must be ITRG and the block must be EVQ (question). All other event blocks must 
-use SUJT mood and the block must be EVS (subjunctive).
+When encoding a question (EVQ block), the verb mood in ACT block must be ITRG 
+(interrogative). All other event blocks in that DFS must be EVS (subjunctive)
+and their ACT block must use subjunctive mood (SUJT).
 
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-EVT Block:
+Formal Syntax
 
 EVT-block::= 
   <EVT:id=Ev_*
@@ -1820,13 +1916,18 @@ EVP-block::=
 All components share a unified structure and must obey the following
 production rules:
 
-MANDATORY RULE:
-EVT block is used only for dynamic desctiptions - actions and occurrences.
-For any type of static description use CPL block.
+➤ EVT vs CPL disambiguation rule between :
+If the verb to be encoded expresses or implies an occurrence (a dynamic 
+change), use EVT series block. If the verb expresses static description
+use CPL block.
 
-------------------------------------------------------------
-RULE: Structured Verb Governance via CRB
-------------------------------------------------------------
+NOTE:
+Formally, habitual aspect (HABT) is sufficient to encode non-singular
+occurrences. EVP is introduced as a semantic stabilizer to prevent
+unintended concretization of habitual statements by the interpreter.
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+➤ Structured Verb Governance via CRB
 If a verb’s governance does not introduce independent arguments, but instead
 establishes a structural relationship among multiple complements
 (e.g. through prepositions, case marking, or other relational markers),
@@ -1853,98 +1954,60 @@ Corollary:
 If complements can be reordered, removed, or interpreted only in relation
 to each other (rather than independently), they MUST be compiled into a CRB.
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 SBJ Block - The event subject
 ======================================================================
 
+Declaration Rules:
+
+An object must be either entity e_* or nominalization n_* or quantified 
+collection q_*. 
+A node of any different type passed to SBJ block invalidates DFS.
+
+SBJ block with entity : 
+
+SBJ-BLOCK ::=
+  <SBJ:
+     SBJTERM
+     PRP= preposition_or_NIL
+     SLK=semantic_link
+  JBO>
+
+Where:
+  SBJTERM ::= nodeid | <connector> SBJTERM SBJTERM+
+  preposition_or_NIL ::= "lexical_preposition" | NIL  
+  semantic_link ::= relevant link from MATRIX B
+
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ Single subject
-
-SBJ-BLOCK ::= 
-    <SBJ: nodeid >
-
-Where nodeid::= e_* | n_* | q_*
-
-Example:
-
-    <SBJ: e_s_tng_desk >
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ Logical subject group in Łukasiewicz Notation:
-
-SBJ-BLOCK ::= 
-    <SBJ: <connector> nodeid_N  [ nodeid_M ... ] [ <connector> nodeid_O  [ nodeid_P ... ] ] >
-
-Example:
-
-    <SBJ: $and e_s_tng_John e_s_tng_Snider $or e_s_tng_Jim >
-
-Where nodeid::= e_* | n_* | q_*
-
-<connector> ::= $<original_surface_connector_as_snake>
-
 ======================================================================
 🔸 CRA Block - Circumtantial Application
 ======================================================================
 
+Declaration Rules:
+
+• CRA block accepts a node of circumtantial type c_* or discourse 
+  circumtantial d_* as a parameter. Any other node type invalidates DFS.
+
+• CRA block is licensed only in EVT series blocks and must be located after
+  ACT block. Placing CRA block in any other block invalidates DFS.
+
+• discourse circumtantial node is a special type node filled with unary 
+discourse singleton lexemes and does not require a CRB block. Their CLS 
+values are listed in MATRIX D.
+
+Formal syntax:
+
 CRA-BLOCK ::= 
     <CRA: c_nodeid CLS: semantic_class>
 
+where
 nodeid ::= c_* | d_*
-  // c_* : Circumtantial nodeid declared in CRB block
-  // d_* : discourse Circumtantial constant (no CRB block)
+  // c_* : circumtantial nodeid declared by CRB block
+  // d_* : discourse circumtantial constant (no CRB block)
+semantic_class - comes from CRB or MATRIX D  
   
-Only Circumtantial or Discourse Circumtantial nodes are licesned in CRA block.
-Any other node type invalidates DFS immediately.
-
-CRA introduces the ◼Circumtantial node◼ pertaining to the event or copula.
-
-MANDATORY RULE:
-CRA block must be located in EVT block after the OBJ blocks. 
-Placing CRA block to any other location invalidates FSP immediately.
-
-Discourse Circumtantials are special nodes filled with unary discourse
-operators that are constants (like entity singletons) and do not require
-a CRB block. Their CLS values are listed below.
-
-CLS: discourse.evid    // Evidential: truth-status qualifiers
-------------------------------------------------------------
-apparently
-evidently
-seemingly
-ostensibly
-reportedly
-allegedly
-supposedly
-purportedly
-presumably
-
-CLS: discourse.quant   // Coverage / scope qualifiers
-------------------------------------------------------------
-mostly
-predominantly
-largely
-broadly
-generally
-
-CLS: discourse.attitude   // Assertion-strength / confidence markers
-------------------------------------------------------------
-undoubtedly
-certainly
-
-CLS: discourse.infer   // Unary inferential: derived, not observed
-------------------------------------------------------------
-logically
-accordingly
-consequently
-thus        // unary use only, not Circumtantial CNJ
-
-Examples of discourse CRA blocks:
-
-<CRA: d_presumably_1 CLS: discourse.evid>
-
-<CRA: d_certainly_1 CLS: discourse.attitude>
-
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 ACT Block 
 ======================================================================
@@ -1987,28 +2050,41 @@ Examples:
 
 <ACT:PRST:COTN:ACTV:IDCT:NIL:NEG listen> is not listening
 
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 Extended ACT Block - infinitival complement, gerund, and participle
 ======================================================================
 
 If the verb group includes infinitival complement, gerund, or participle, and the verb 
-in one of those contructions semantically prepares, enables, or evaluates the second 
+in one of those constructions semantically initiates, enables, or evaluates the second 
 action, encode it with the extended code block:
 
 ACT-BLOCK ::=
-    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma INF:infinitive-lemma PRN:preparation-type AGC:agency-type RLZ: realization type>
+    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma INF:infinitive-lemma INT:initiation-type AGC:agency-type RLZ: realization type>
     |
-    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma GRN:gerund-lemma PRN:preparation-type AGC:agency-type RLZ: realization type>
+    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma GRN:gerund-lemma INT:initiation-type AGC:agency-type RLZ: realization type>
     |
-    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma PTC:participle-lemma PRN:preparation-type AGC:agency-type RLZ: realization type>
+    <ACT:TNS:ASP:VCE:MOO:MDL:PLR lemma PTC:participle-lemma INT:initiation-type AGC:agency-type RLZ: realization type>
 
-Otherwise, summon the subject from the regular clause to compensate for the elided subject in the infinitive / gerund /
-participle group, create regular EVT blocks and link them in DAG with regular CNJ connector.
+Example:
+
+<EVT:id=E4
+  <SBJ: e_bellingcat>
+  <ACT:PAST:INDF:ACTV:IDCT:NIL:POS decide INF:film INT:intention AGC:internal RLZ: projected>
+  <OBJ: e_documentary
+       PRP=NIL
+       SLK=has.object
+  JBO>
+TVE>
+
+Disambiguation rule:
+If the first verb designates its own action rather than pure initiation of the complement verb, the complement must be
+encoded as HDL block. In that case each verb constitutes a separate discourse step and has its own node in CNJ block.
     
 Use the following matrix as a blueprint to build the extended part:
 
 +------------------+----------------------------------------------------------+------------------------+--------------------+
-| Preparation Type | Control Verbs Examples                                   | Agency                 | Realization        |
+| Initiation Type  | Control Verbs Examples                                   | Agency                 | Realization        |
 +------------------+----------------------------------------------------------+------------------------+--------------------+
 | intention        | decide to, plan to, intend to, aim to                    | internal               | projected          |
 | commitment       | promise to, swear to, pledge to                          | internal               | projected          |
@@ -2030,46 +2106,42 @@ Use the following matrix as a blueprint to build the extended part:
 | simulation       | pretend to, claim to, purport to                         | internal               | fictive            |
 +------------------+----------------------------------------------------------+------------------------+--------------------+
 
-Example:
+MANDATORY RULE:
+Extended ACT block MUST NOT introduce an independent occurrent.
+If the secondary action constitutes an occurrent, it MUST be encoded
+as an HDL block and placed in CNJ.
 
-<EVT:id=E4
-  <SBJ: e_bellingcat>
-  <ACT:PAST:INDF:ACTV:IDCT:NIL:POS decide INF:film PRN:intention AGC:internal RLZ: projected>
-  <OBJ: e_documentary
-       PRP=NIL
-       SLK=has.object
-  JBO>
-TVE>
-
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
 🔸 OBJ Block (Unified Complement Structure)
 ======================================================================
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-OBJ block with entity, set, and formal entity parameter object: 
+Declaration Rules:
+
+An object must be either entity e_* or nominalization n_* or quantified 
+collection q_*. 
+A node of any different type passed to OBJ block invalidates DFS.
+
+OBJ block with entity : 
 
 OBJ-BLOCK ::=
-    <OBJ: nodeid_K | <connector> nodeid_N  [ nodeid_M ... ] [ <connector> nodeid_O  [ nodeid_P ... ] ]
-       PRP=preposition_or_NIL
-       SLK=semantic_link
-    JBO>
+  <OBJ:
+     OBJTERM
+     PRP= preposition_or_NIL
+     SLK=semantic_link
+  JBO>
 
 Where:
-  <connector> ::= $<original_surface_connector_as_snake>
-  nodeid ::= e_* | s_* | q_*
+  OBJTERM ::= nodeid | <connector> OBJTERM OBJTERM+
   preposition_or_NIL ::= "lexical_preposition" | NIL  
-  semantic_link ::= one SLK from unified kernel (§5.x)
+  semantic_link ::= relevant link from MATRIX B
   
-MANDATORY: 
-Only entity or nominalization node types are admitted in OBJ block as a node.
-Using EVT or CNJ as entity inside OBJ block disqualfies you immediately!
-
 SEMANTICS DIRECTION:
 
   SBJ  --SLK-->  OBJ
 
-PRP preserves the surface form ◼exactly as it reads in the source text◼.  
-SLK provides ◼canonical abstract semantics◼.
+PRP preserves the surface form exactly as it reads in the source text.  
+SLK provides canonical abstract semantics.
 
 Examples:
 
@@ -2093,11 +2165,11 @@ Examples:
 
 Multiple OBJ-BLOCKs may appear in any EVT when the verb licenses multiple arguments.
 
-
 MANDATORY RULE:
-If a single subject performs one action (ACT) simultaneously affecting multiple objects, all objects must be represented 
-as separate <OBJ> blocks within a single <EVT> block, not as separate events.
-Do not create multiple EVT blocks for what is a single event with multiple objects.
+If a single subject performs one action ACT simultaneously affecting multiple objects, 
+all objects must be represented as separate OBJ blocks within a single EVT block, not 
+as separate events. 
+Create multiple EVT blocks for a single event with multiple objects invalidates DFS.
 
 Example:
 
@@ -2129,33 +2201,8 @@ Incorrect:
     <ACT:PAST:INDF:ACTV:IDCT:NIL:POS go>
     <OBJ: e_kitchen
 
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-OBJ block with event pointer object (AKA propositional anaphora): 
-
-OBJ-BLOCK ::=
-    <OBJ: Ev_ID
-          PRP=preposition_or_NIL
-          PTR=event_pointer
-          SLK=semantic_link
-          [QTY>N | QTY>=N | QTY<N | QTY<=N | N<QTY<M | N<=QTY<=M | N<QTY<=M | N<=QTY<M QTY=<arbitraty phrase>]
-    JBO>
-
-Where:
-
-  nodeid ::= Ev_* |Eq_* |Es_*
-  preposition_or_NIL ::= "lexical_preposition" | NIL  
-  event_pointer ::= pronoun/anaphora that semantically points to the Ev_ID
-  semantic_link ::= one SLK from unified kernel (§5.x) If relevance not found, invent one.
-  
-MANDATORY:
-✦ PTR may only bind nominal (referential) `that` that points to an event clause as a sort of nominalization.
-✦ Complementizer `that` that links event clauses like a conjunction MUST NOT appear in OBJ.
-✦ Complementizer `that` is encoded exclusively as CNJ.
-
-✦ If `that` appears in OBJ, it MUST be referential and MUST resolve to an Ev/Eq/Es node.  
-
 ------------------------------------------------------------
-4.x.5 Overall EVT Structure — Example
+Overall EVT Structure — Example
 ------------------------------------------------------------
 
 Source:
@@ -2182,211 +2229,93 @@ Interpretation:
   SBJ (smell) has.association childhood  
 
 ------------------------------------------------------------
-4.x.6 Notes and Constraints
+Notes and Constraints
 ------------------------------------------------------------
 
 1. Every semantic argument of ACT must appear as an OBJ block.
 2. PRP is always preserved; it enables perfect reversibility.
-3. SLK must come from the unified declarative kernel.
-4. OBJ blocks form a ◼subject-anchored relational fan-out◼, yielding a
+3. SLK must come from MATRIX B.
+4. OBJ blocks form a subject-anchored relational fan-out, yielding a
    DAG of SBJ → OBJ edges.
 5. No SLK appears inside the ACT block. The verb is not the semantic
-   link; the verb merely *selects* SLKs via lexical/PRP mapping.
+   link; the verb merely selects SLKs via lexical/PRP mapping.
 6. Prepositions never map directly to SLK in the final representation:
    PRP is surface, SLK is deep structure.
 
-------------------------------------------------------------
-4.x.7 EVT as the Bridge Layer
-------------------------------------------------------------
-
-EVT links:
-
-  • surface syntax → semantic graph
-  • lexical combinatorics → canonical SLK relations
-  • sentence structure → entity graph
-
-EVT is declarative at the argument level and does not handle discourse
-logic.
-
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ======================================================================
-🔸 CNJ block — The topological structure of events in Łukasiewicz Notation
+🔸 CNJ block — Topological Structure of Fabular Flow (Łukasiewicz Notation)
 ======================================================================
 
 Declaration Rules:
 
-• Each DFS must have exactly one CNJ block.
+• Each DFS MUST contain exactly one CNJ block.
 
-• The CNJ block reflects event topology exported by the surface
-  using fabular nodes and CNJ connectors.
-  
-• The following fabular nodes are licensed in CNJ:
-  • Event — EVT / EVQ / EVS / EVP
-  • Copula — CPL
-  • Relation — REL
+• The CNJ block encodes the topological structure of fabular flow exported
+  by the surface, using fabular and control nodes connected by CNJ connectors.
+
+• CNJ hosts nodes uniformly as topological units. Not all nodes participating
+  in CNJ introduce fabular occurrences.
+
+• The following nodes are licensed in CNJ:
+  • Event blocks — EVT / EVQ / EVS / EVP
+  • Copular predication — CPL
+  • Relation — CMP
   • Fabular Adjunct — FAB
-  • Subordinate Controller - CTL
-  • Headless A
+  • Ontological Space Controller — CTL
+  • Headless Action — HDL
+  • Allocation of Collection — ALC
 
-• CNJ connectors are non-explanatory event flow operators that include,
-  but are not limited to, formalized conjunctions and complementizers.
+• CNJ connectors are non-explanatory discourse-topological operators that
+  continue, branch, or constrain fabular flow.
 
-• CNJ connectors do not encode semantic interpretation and serve exclusively
-  to continue or branch the fabular flow.
-  
-Formal Syntax:
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+• CNJ connectors do NOT encode semantic interpretation and do NOT introduce
+  ontological content.
 
-CNJ-BLOCK ::= Ev_Event_K | <connector> Ev_Event_N  [ Ev_Event_M ... ] [ <connector> Ev_Event_O  [ Ev_Event_P ... ] ]
-           
-where 
-<connector>::= 
-  $<original_surface_connector_as_snake> | $<complementizer> | $adjucnt 
-  
- complementizer::= $that | $whether | $if | ...
-
-Connectors in CNJ are not logical, they are propositional.
-
-MANDATORY RULES:
-All connectors in CNJ must abide by Łukasiewicz Notation in terms in topological sense.
-All CNJ-level nodes declared in DFS must appear in CNJ exactly once.
-Free standing nodes and free hanging connectors render CNJ block and the entire DFS invalid.
-A comma connector `,` that connects clauses in surface must be replaced with $and in CNJ block.
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
-Example that exports complementizer:
-
-Ann hoped $that Andy won't leave her and they will save their marriage.
-  
-======================================================================
-🔸 CTL block — Controller of Ontological Space for Subordinate Events
-======================================================================
-
-Declaration Rules:
-----------------------------
-
-The CTL block declares a fabular control node that binds a controlling
-ontological space to subordinate events.
-
-A single CTL MUST be created for each non-authorial ontological space 
-introduced by a controlling phrase. All discourse elements within that space 
-MUST be controlled by the same CTL, which is lifted to the CNJ level.
-
-A CTL block is comprised of:
-
-• an ID reference to the entity or nominalization that introduces and
-  controls the ontological space;
-
-• an ID reference to the subordinate event that is licensed to occur
-  within that ontological space.
-
-----------------------------------------------------------------------  
-CTL Block Syntax  
+----------------------------------------------------------------------
+Formal Syntax
 ----------------------------------------------------------------------
 
-<CTL
-  CTL-ID: Ct_<control_block_id>
-  CTL: e_* | n_*        // controlling entity or nominalization
-  SRF: <surface>
-  MSE-BLOCK // structurally and semantically the same as in ENB
-  LNK-BLOCK // structurally and semantically the same as in ENB
-  EVT: Ev_*             // subordinate event ID
-LTC>
+CNJ-BLOCK ::=
+    Fabular_Node
+  | <connector> Fabular_Node [ Fabular_Node ... ]
+    [ <connector> Fabular_Node [ Fabular_Node ... ] ]
 
-----------------------------------------------------------------------  
-Usage in CNJ  
+where:
+
+Fabular_Node ::= Ev_* | Eq_* | Es_* | Ep_* | Cp_* | Cmp_* | Fab_* | Ct_* | H_* | Al_*
+
+<connector> ::=
+    $<original_surface_connector_as_snake>
+  | $<complementizer>
+
+<complementizer> ::= $that | $whether | $if | $when | $where | $to | ...
+
+----------------------------------------------------------------------
+Mandatory Rules
 ----------------------------------------------------------------------
 
-A CTL block is licensed directly in the CNJ block as a fabular node.
+• All CNJ connectors MUST conform to Łukasiewicz Notation in topological sense.
+• Every CNJ-level node declared in DFS MUST appear in CNJ exactly once.
+• Free-standing nodes or dangling connectors invalidate the CNJ block and DFS.
+• A comma connector in surface MUST be normalized to $and in CNJ.
+• CNJ MUST NOT contain any connector or node not explicitly licensed above.
 
-<CNJ
-  $<complementizer>
-  Ev_<controlling_event>
-  Ct_<control_block_id>
+----------------------------------------------------------------------
+Example (Complementizer Export)
+----------------------------------------------------------------------
+
+Surface:
+Ann hoped that Andy would not leave her and that they would save their marriage.
+
+CNJ:
+<CNJ>
+  $that
+    Ev_hope_*
+    $and
+      Ev_not_leave_*
+      Ev_save_marriage_*
 JNC>
-
-----------------------------------------------------------------------  
-Conceptual Definition  
-----------------------------------------------------------------------
-
-The subject or object of a controlling clause subordinates a subordinate
-clause by creating an ontological space in which the subordinate event
-is licensed to occur.
-
-This ontological space is expressed on the surface as:
-
-<ontological space> + <complementizer>
-
-The CTL block joins the controlling phrase and the subordinate event
-into a single fabular control structure that participates in CNJ
-topology.
-
-CTL does not describe an event and does not modify an event.
-CTL introduces a dominance relation between a controlling space
-and a subordinate event.
-
-----------------------------------------------------------------------  
-Types of Ontological Space (Non-Exhaustive)  
-----------------------------------------------------------------------
-
-✦ Time Object
-
-An abstract temporal container that licenses an event.
-
-Examples:
-There were CTL-phrase:[times] complementizer:[when]
-the price of a gallon of milk was only 99 cents.
-
-There will come CTL-phrase:[the blessed time] complementizer:[when]
-everyone will be free.
-
-----------------------------------------------------------------------  
-✦ Spatial Object
-
-A physical or abstract location that enables or restricts an event.
-
-Examples:
-We don't have CTL-phrase:[enough room] in this parking lot
-complementizer:[to] park our van.
-
-The island was a long strip of CTL-phrase:[barren land]
-complementizer:[where] nobody lived except for the lighthouse keeper.
-
-----------------------------------------------------------------------  
-✦ Enabler Object
-
-A concrete object whose existence enables an event.
-
-Example:
-Tim has bought CTL-phrase:[a lathe]
-complementizer:[with which] he could extend his woodwork business.
-
-----------------------------------------------------------------------  
-✦ Communication Object
-
-A communicative act or artifact that frames a subordinate proposition.
-
-Example:
-Donna could not forgive her brother for CTL-phrase:[his words]
-complementizer:[that] her son Danny would never become a real man
-and get a job.
-
-----------------------------------------------------------------------  
-✦ Mental Object
-
-A cognitive or experiential space hosting a subordinate event.
-
-Example:
-Emma had CTL-phrase:[a weird dream]
-complementizer:[that] she became a squirrel and climbed
-to the top of an oak tree.
-
-▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-✦ information object: 
-
-Example:   
-Richard received CTL-phrase:[an email from his bank] *complementizer:[that] 
-he was preselected for a home equity loan.
 
 ======================================================================
 DUAL ENCODING STANDARD (VERBOSE MODE ↔ COMPACT MODE)
