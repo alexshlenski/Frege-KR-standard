@@ -1360,7 +1360,6 @@ Declaration Rules:
   nominalized actions or processes when they are expressed on the
   surface as a single conjunctive or enumerative group sharing
   the same fabular attachment and scope.
-  
 
 • FAB MUST fully decompose and explain the internal structure of the
   fabular adjunct span in the MSE/LNK segments (microsemantics).
@@ -1370,7 +1369,7 @@ Declaration Rules:
 Formal Syntax:
 
 <FAB
-  FAB-ID: F_node_id
+  FAB-ID: F_*
   SRF: "<original Fabular Adjunct span>"
   FCL: conditional | commitment | deterrent | authorization | projection | exchange | reciprocity | other
   DSC: discourse_modifier // optional
@@ -1493,7 +1492,7 @@ Attribute identifiers (a_*) MUST NOT appear in:
 • CNJ
 • FAB
 
-Any forbidden occurrence INVALIDATES DFS.
+Any forbidden occurrence invalidates DFS.
 
 ----------------------------------------
 Microsemantic Requirement
@@ -2277,13 +2276,13 @@ Formal Syntax
 ----------------------------------------------------------------------
 
 CNJ-BLOCK ::=
-    Fabular_Node
-  | <connector> Fabular_Node [ Fabular_Node ... ]
-    [ <connector> Fabular_Node [ Fabular_Node ... ] ]
+    Discourse_Node
+  | <connector> Discourse_Node [ Discourse_Node ... ]
+    [ <connector> Discourse_Node [ Discourse_Node ... ] ]
 
 where:
 
-Fabular_Node ::= Ev_* | Eq_* | Es_* | Ep_* | Cp_* | Cmp_* | Fab_* | Ct_* | H_* | Al_*
+Discourse_Node ::= Ev_* | Eq_* | Es_* | Ep_* | Cp_* | Cmp_* | F_* | Ct_* | H_* | Al_*
 
 <connector> ::=
     $<original_surface_connector_as_snake>
@@ -2316,6 +2315,56 @@ CNJ:
       Ev_not_leave_*
       Ev_save_marriage_*
 JNC>
+
+----------------------------------------------------------------------
+CNJ with Fabular Adjunct
+----------------------------------------------------------------------
+
+In addition to connector-based and complementizer-based structures,
+CNJ supports fabular adjunction via the special adjunct operator.
+
+The adjunct operator explicitly marks that an asserted proposition
+node is accompanied by a fabular adjunct node specifying associated
+or necessary actions, without introducing a propositional relation.
+
+Syntax:
+
+<CNJ>
+  $adjunct
+    Ev_host
+    F_fab
+JNC>
+
+Where:
+
+• Ev_host MUST be a single event node declared by an event block:
+  EVT | EVQ | EVS | EVP
+
+• F_fab MUST be a fabular adjunct node declared by a FAB block
+
+• $adjunct introduces no causal, temporal, conditional, or logical
+  relation between nodes.
+
+• $adjunct does not modify the semantics of the host event and does
+  not participate in world-model inference.
+
+• $adjunct only establishes an attachment relation indicating that
+  the fabular content expressed by FAB is associated with the
+  assertion of HOST.
+
+Restrictions:
+
+• $adjunct MUST NOT be nested or composed.
+• $adjunct MUST NOT take CNJ expressions as arguments.
+• $adjunct MUST NOT apply to multiple host nodes.
+• $adjunct MUST NOT be used as an argument of other CNJ operators.
+
+Interpretation:
+
+The host event node is asserted in the discourse, with the fabular
+adjunct node providing a nominalized representation of associated
+actions required or implied by the assertion, without altering the
+propositional topology.
 
 ======================================================================
 DUAL ENCODING STANDARD (VERBOSE MODE ↔ COMPACT MODE)
